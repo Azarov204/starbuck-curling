@@ -1,9 +1,12 @@
 nav {
   width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 4px 0px;
-  position: fixed;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: linear-gradient(
+    var(--hero-grad-start, #ffffff),
+    var(--hero-grad-end, rgba(255, 255, 255, 0.9))
+  );
+  position: sticky;
   top: 0;
   left: 0;
   display: flex;
@@ -12,13 +15,37 @@ nav {
   z-index: 10;
 }
 
-.logo {
-  height: 130px;
-}
-
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 5px 20px;
-  font: 16px;
+  margin: 0px 13px;
+  font-size: 1.5rem;
+  transition:
+    padding 0.28s ease-in-out,
+    font-size 0.28s ease-in-out;
+}
+
+.logo {
+  width: 25rem;
+  transition: width 0.28s ease-in-out;
+}
+
+/* shrink state */
+nav.shrink {
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.shrink ul li {
+  font-size: 1.3rem;
+}
+
+nav.shrink .logo {
+  width: 20rem;
+}
+
+.header-link {
+  color: inherit;
+  text-decoration: none;
 }
