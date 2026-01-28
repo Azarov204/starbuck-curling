@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40rem;
 }
 
 .hero::before {
@@ -28,10 +27,13 @@
   transition: background 0.15s ease;
 }
 
-.hero-content {
+.hero-logo {
   position: relative;
-  z-index: 1;
-  transform: translateX(-20rem) translateY(-3rem);
+  width: 30rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .hero-divider {

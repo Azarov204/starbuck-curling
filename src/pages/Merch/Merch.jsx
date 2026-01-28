@@ -1,5 +1,6 @@
 import HeroText from "../../components/Hero/HeroText";
 import hero_image from "../../assets/images/image_1_crop.jpg";
+import Footer from "../../components/Footer/Footer";
 
 const Merch = () => {
   return (
@@ -7,39 +8,42 @@ const Merch = () => {
       <HeroText
         image={hero_image}
         title="Merch"
-        description="Give us your money and get something cool in return"
+        description="Give us money, get something cool"
       ></HeroText>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
-      <h1>Swag swag swag</h1>
+      <div className="container">
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <h1>Swag swag swag</h1>
+        <Footer />
+      </div>
     </>
   );
 };

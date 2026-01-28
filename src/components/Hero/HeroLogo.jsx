@@ -5,9 +5,7 @@ const HeroLogo = ({ image, logo }) => {
 
   return (
     <section className="hero" style={style}>
-      <div className="hero-content">
-        <img className="hero-logo" src={logo} alt="Hero Logo" />
-      </div>
+      <img className="hero-logo" src={logo} alt="Hero Logo" />
       <>
         <svg
           className="hero-divider"

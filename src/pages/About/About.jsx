@@ -1,6 +1,7 @@
 import "./About.css";
 import HeroText from "../../components/Hero/HeroText";
 import hero_image from "../../assets/images/image_1_crop.jpg";
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   return (
@@ -10,44 +11,47 @@ const About = () => {
         title="About Us"
         description="Starbuck Curling Club"
       ></HeroText>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
-      <h1>About about about</h1>
+      <div className="container">
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <h1>About about about</h1>
+        <Footer />
+      </div>
     </>
   );
 };

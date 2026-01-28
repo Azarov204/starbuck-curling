@@ -4,7 +4,7 @@ nav {
   padding-right: 5%;
   background-image: linear-gradient(
     var(--hero-grad-start, #ffffff),
-    var(--hero-grad-end, rgba(255, 255, 255, 0.9))
+    var(--hero-grad-end, rgba(255, 255, 255, 0.85))
   );
   position: sticky;
   top: 0;
