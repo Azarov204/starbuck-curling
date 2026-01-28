@@ -1,15 +1,12 @@
 import "./Home.css";
-import hero_image from "../../assets/images/image_2.jpg";
-import Hero from "../../components/Hero/Hero";
+import HeroLogo from "../../components/Hero/HeroLogo";
+import hero_image from "../../assets/images/image_2_crop.jpg";
+import hero_logo from "../../assets/logos/starbuck_1.png";
 
 const Home = () => {
   return (
     <>
-      <Hero
-        image={hero_image}
-        title="Home"
-        description="Great curling and lots of beer"
-      ></Hero>
+      <HeroLogo image={hero_image} logo={hero_logo}></HeroLogo>
       <h1>Home home home</h1>
       <h1>Home home home</h1>
       <h1>Home home home</h1>

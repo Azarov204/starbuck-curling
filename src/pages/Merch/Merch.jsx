@@ -1,15 +1,14 @@
-import React from "react";
-import Hero from "../../components/Hero/Hero";
-import hero_image from "../../assets/images/image_1.jpg";
+import HeroText from "../../components/Hero/HeroText";
+import hero_image from "../../assets/images/image_1_crop.jpg";
 
 const Merch = () => {
   return (
     <>
-      <Hero
+      <HeroText
         image={hero_image}
         title="Merch"
         description="Give us your money and get something cool in return"
-      ></Hero>
+      ></HeroText>
       <h1>Swag swag swag</h1>
       <h1>Swag swag swag</h1>
       <h1>Swag swag swag</h1>

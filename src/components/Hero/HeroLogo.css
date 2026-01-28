@@ -1,4 +1,3 @@
-/* ...existing code... */
 .hero {
   position: relative;
   overflow: hidden;
@@ -21,7 +20,8 @@
     ),
     var(--hero-bg);
   background-size: cover;
-  background-position: center;
+  /* allow overriding the vertical position to nudge the image up/down */
+  background-position: var(--hero-bg-position, center 10%);
   background-repeat: no-repeat;
   z-index: 0;
   pointer-events: none;
@@ -32,14 +32,6 @@
   position: relative;
   z-index: 1;
   transform: translateX(-20rem) translateY(-3rem);
-}
-
-.hero-title {
-  font-size: 4rem;
-}
-
-.hero-desc {
-  font-size: 2rem;
 }
 
 .hero-divider {

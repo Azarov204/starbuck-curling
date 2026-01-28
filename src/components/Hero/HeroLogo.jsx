@@ -1,13 +1,12 @@
-import "./Hero.css";
+import "./HeroLogo.css";
 
-export default function Hero({ image, title, description }) {
+const HeroLogo = ({ image, logo }) => {
   const style = { "--hero-bg": `url(${image})` };
 
   return (
     <section className="hero" style={style}>
       <div className="hero-content">
-        <h1 className="hero-title">{title}</h1>
-        <p className="hero-desc">{description}</p>
+        <img className="hero-logo" src={logo} alt="Hero Logo" />
       </div>
       <>
         <svg
@@ -20,4 +19,6 @@ export default function Hero({ image, title, description }) {
       </>
     </section>
   );
-}
+};
+
+export default HeroLogo;
