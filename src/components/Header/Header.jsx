@@ -19,6 +19,7 @@ const Header = () => {
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         // scrolling DOWN
         setShowNav(false);
+        setOpen(false);
       } else {
         // scrolling UP
         setShowNav(true);
@@ -34,15 +35,15 @@ const Header = () => {
   return (
     <nav
       className={`fixed top-0 z-50 w-full
-      bg-white text-black 
+      bg-white/80
+      backdrop-blur-sm
       transition-all duration-300 
-      ${scrolled ? "h-20" : "h-25"}
       ${showNav ? "translate-y-0" : "-translate-y-full"}
       md:translate-y-0`}
     >
       <div
         className={`mx-auto max-w-7xl px-4 flex items-center 
-        justify-between transition-all duration-300 ${scrolled ? "py-2" : "py-4"}`}
+        justify-between transition-all duration-300`}
       >
         {/* Logo */}
         <NavLink
@@ -50,42 +51,53 @@ const Header = () => {
           className="text-lg font-bold tracking-wide"
         >
           <img src={logo} alt="Starbuck Curling Club Logo"
-               className={`transition-all duration-300 ${scrolled ? "h-15" : "h-20"}`}/>
+               className={`transition-all duration-300 ${scrolled ? "h-17" : "h-24"}`}/>
         </NavLink>
 
         {/* Hamburger (mobile) */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-1"
+          className="md:hidden flex flex-col gap-1 p-3 cursor-pointer"
           aria-label="Toggle menu"
         >
-          <span className="h-0.5 w-8 bg-black"></span>
-          <span className="h-0.5 w-8 bg-black"></span>
-          <span className="h-0.5 w-8 bg-black"></span>
+          <span className="h-0.5 w-6 bg-black"></span>
+          <span className="h-0.5 w-9 bg-black"></span>
+          <span className="h-0.5 w-6 bg-black"></span>
         </button>
 
         {/* Desktop links */}
         <div className={`hidden md:flex space-x-6 transition-all duration-300 ${scrolled ? "text-sm" : "text-base"}`}>
-          <NavLink to="/starbuck-curling/" className="hover:text-gray-300">
+          <NavLink to="/starbuck-curling/" className="hover:text-dark-hover">
             Home
           </NavLink>
           <NavLink
             to="/starbuck-curling/about"
-            className="hover:text-gray-300"
+            className="hover:text-dark-hover"
           >
             About
           </NavLink>
           <NavLink
             to="/starbuck-curling/leagues"
-            className="hover:text-gray-300"
+            className="hover:text-dark-hover"
           >
             Leagues
           </NavLink>
           <NavLink
             to="/starbuck-curling/merch"
-            className="hover:text-gray-300"
+            className="hover:text-dark-hover"
           >
             Merch
+          </NavLink>
+          <NavLink
+            to="/#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({behavior: "smooth"});
+            }}
+          >
+            Contact
           </NavLink>
         </div>
       </div>
@@ -101,28 +113,28 @@ const Header = () => {
             <NavLink
               to="/starbuck-curling/"
               onClick={() => setOpen(false)}
-              className="hover:text-gray-300"
+              className="hover:text-dark-hover"
             >
               Home
             </NavLink>
             <NavLink
               to="/starbuck-curling/about"
               onClick={() => setOpen(false)}
-              className="hover:text-gray-300"
+              className="hover:text-dark-hover"
             >
               About
             </NavLink>
             <NavLink
               to="/starbuck-curling/leagues"
               onClick={() => setOpen(false)}
-              className="hover:text-gray-300"
+              className="hover:text-dark-hover"
             >
               Leagues
             </NavLink>
             <NavLink
               to="/starbuck-curling/merch"
               onClick={() => setOpen(false)}
-              className="hover:text-gray-300"
+              className="hover:text-dark-hover"
             >
               Merch
             </NavLink>
