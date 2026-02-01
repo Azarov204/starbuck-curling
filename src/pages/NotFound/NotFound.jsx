@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
+import {Link} from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -9,7 +8,6 @@ const NotFound = () => {
       <Link to="/starbuck-curling/">
         <button>Go to Home Page</button>
       </Link>
-      <Footer />
     </div>
   );
 };

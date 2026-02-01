@@ -1,6 +1,6 @@
 import HeroText from "../../components/Hero/HeroText";
 import hero_image from "../../assets/images/image_2_crop.jpg";
-import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact.jsx";
 
 const Leagues = () => {
   return (
@@ -42,8 +42,8 @@ const Leagues = () => {
         <h1>Leagues Page</h1>
         <h1>Leagues Page</h1>
         <h1>Leagues Page</h1>
-        <Footer />
       </div>
+      <Contact/>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import HeroText from "../../components/Hero/HeroText";
 import hero_image from "../../assets/images/image_1_crop.jpg";
-import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact.jsx";
 
 const Merch = () => {
   return (
@@ -42,8 +42,8 @@ const Merch = () => {
         <h1>Swag swag swag</h1>
         <h1>Swag swag swag</h1>
         <h1>Swag swag swag</h1>
-        <Footer />
       </div>
+      <Contact/>
     </>
   );
 };

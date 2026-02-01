@@ -1,6 +1,6 @@
 import "./Home.css";
 import HeroLogo from "../../components/Hero/HeroLogo";
-import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact";
 import hero_image from "../../assets/images/image_2_crop.jpg";
 import hero_logo from "../../assets/logos/starbuck_1.png";
 
@@ -45,8 +45,8 @@ const Home = () => {
         <h1>Home home home</h1>
         <h1>Home home home</h1>
         <h1>Home home home</h1>
-        <Footer />
       </div>
+      <Contact/>
     </>
   );
 };

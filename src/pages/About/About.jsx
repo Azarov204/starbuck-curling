@@ -1,7 +1,7 @@
 import "./About.css";
 import HeroText from "../../components/Hero/HeroText";
 import hero_image from "../../assets/images/image_1_crop.jpg";
-import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact.jsx";
 
 const About = () => {
   return (
@@ -50,8 +50,8 @@ const About = () => {
         <h1>About about about</h1>
         <h1>About about about</h1>
         <h1>About about about</h1>
-        <Footer />
       </div>
+      <Contact/>
     </>
   );
 };
