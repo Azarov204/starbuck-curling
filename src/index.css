@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-    --color-starbuck: #FFF2BE
+    /* Background Colours */
+    --color-starbuck: #FFF2BE;
+    --color-website-bg: #5b6e83;
+
+    /* Text Colours*/
+    --color-dark-text: #121212;
+    --color-dark-hover: #838383;
 }
