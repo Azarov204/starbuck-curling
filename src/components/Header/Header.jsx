@@ -42,7 +42,7 @@ const Header = () => {
       md:translate-y-0`}
     >
       <div
-        className={`mx-auto max-w-7xl px-4 flex items-center 
+        className={`mx-auto max-w-7xl px-6 flex items-center 
         justify-between transition-all duration-300`}
       >
         {/* Logo */}
@@ -51,7 +51,7 @@ const Header = () => {
           className="text-lg font-bold tracking-wide"
         >
           <img src={logo} alt="Starbuck Curling Club Logo"
-               className={`transition-all duration-300 ${scrolled ? "h-17" : "h-24"}`}/>
+               className={`transition-all duration-300 ${scrolled ? "h-20" : "h-24"}`}/>
         </NavLink>
 
         {/* Hamburger (mobile) */}
@@ -66,7 +66,7 @@ const Header = () => {
         </button>
 
         {/* Desktop links */}
-        <div className={`hidden md:flex space-x-6 transition-all duration-300 ${scrolled ? "text-sm" : "text-base"}`}>
+        <div className={`hidden md:flex space-x-6 transition-all duration-300 ${scrolled ? "text-base" : "text-lg"}`}>
           <NavLink to="/starbuck-curling/" className="hover:text-dark-hover">
             Home
           </NavLink>
@@ -108,7 +108,7 @@ const Header = () => {
           open ? "max-h-60" : "max-h-0"
         }`}
       >
-        <div className="md:hidden bg-starbuck p-4">
+        <div className="md:hidden bg-starbuck p-4 text-lg">
           <div className="flex flex-col space-y-3 justify-center items-center w-full">
             <NavLink
               to="/starbuck-curling/"
@@ -137,6 +137,18 @@ const Header = () => {
               className="hover:text-dark-hover"
             >
               Merch
+            </NavLink>
+            <NavLink
+              to="/#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({behavior: "smooth"});
+                setOpen(false);
+              }}
+            >
+              Contact
             </NavLink>
           </div>
         </div>
