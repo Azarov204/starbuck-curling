@@ -2,13 +2,14 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className="footer">
-      <p>© {year} Starbuck Curling Club. All rights reserved.</p>
-      <ul>
-        <li>Designed by Adam Azarov</li>
-        <li>Terms of Service</li>
-      </ul>
-    </div>
+    <footer className="py-6 flex justify-center bg-blue-950 text-sm md:text-base">
+      <div>
+        <span
+          className="text-body text-white">
+          {`© ${year} Starbuck Curling Club | Designed by Adam Azarov | All rights reserved`}
+        </span>
+      </div>
+    </footer>
   );
 };
 

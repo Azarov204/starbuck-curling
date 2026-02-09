@@ -42,7 +42,7 @@ const Header = () => {
       md:translate-y-0`}
     >
       <div
-        className={`mx-auto max-w-7xl px-6 flex items-center 
+        className={`mx-auto max-w-7xl px-6 flex items-center
         justify-between transition-all duration-300`}
       >
         {/* Logo */}

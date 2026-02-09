@@ -1,12 +1,12 @@
 import HeroText from "../../components/Hero/HeroText";
-import hero_image from "../../assets/images/image_2_crop.jpg";
+import image from "../../assets/images/image_2_crop.jpg";
 import Contact from "../../components/Contact/Contact.jsx";
 
 const Leagues = () => {
   return (
     <>
       <HeroText
-        image={hero_image}
+        backgroundImage={image}
         title="Leagues"
         description="Different Leagues we offer at the Starbuck Curling Club"
       ></HeroText>

@@ -1,13 +1,12 @@
-import "./About.css";
 import HeroText from "../../components/Hero/HeroText";
-import hero_image from "../../assets/images/image_1_crop.jpg";
+import image from "../../assets/images/image_1_crop.jpg";
 import Contact from "../../components/Contact/Contact.jsx";
 
 const About = () => {
   return (
     <>
       <HeroText
-        image={hero_image}
+        backgroundImage={image}
         title="About Us"
         description="Starbuck Curling Club"
       ></HeroText>

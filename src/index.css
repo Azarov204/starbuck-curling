@@ -3,9 +3,24 @@
 @theme {
     /* Background Colours */
     --color-starbuck: #FFF2BE;
-    --color-website-bg: #5b6e83;
+    --color-website-bg: #8897a8;
 
     /* Text Colours*/
     --color-dark-text: #121212;
     --color-dark-hover: #838383;
+}
+
+@layer utilities {
+    @keyframes slide-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-slide-left {
+        animation: slide-left 30s linear infinite;
+    }
 }
