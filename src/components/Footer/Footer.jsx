@@ -2,7 +2,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-6 flex justify-center bg-blue-950 text-sm md:text-base">
+    <footer className="p-6 flex justify-center bg-website-bg text-sm md:text-base lg:text-lg">
       <div>
         <span
           className="text-body text-white">

@@ -1,7 +1,7 @@
 const HeroLogo = ({backgroundImage, logo}) => {
 
   return (
-    <section className="relative w-full h-180 overflow-hidden">
+    <section className="relative w-full h-120 md:h-170 overflow-hidden">
 
       {/* Background Image */}
       <div
@@ -20,7 +20,7 @@ const HeroLogo = ({backgroundImage, logo}) => {
         <img
           src={logo}
           alt="Hero Logo"
-          className="max-h-[70%] max-w-[80%] object-contain drop-shadow-xl"
+          className="max-h-[60%] max-w-[70%] object-contain drop-shadow-xl"
         />
       </div>
 
