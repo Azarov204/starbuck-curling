@@ -40,7 +40,7 @@ const Contact = () => {
         {/* FORM */}
         <form className="space-y-2" onSubmit={onSubmit}>
           {/* Row 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block mb-2">
                 *First Name
@@ -57,7 +57,7 @@ const Contact = () => {
           </div>
 
           {/* Row 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block mb-2">
                 *Email
@@ -91,17 +91,17 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="max-w-6xl mx-auto space-y-2 font-bold grid grid-cols-1 md:grid-cols-5">
-          <div className="flex items-center gap-2 col-span-1">
+          <div className="flex items-center gap-1.5 col-span-1">
             <Phone className="w-5 h-5 text-dark-text"/>
             <span>(123) 222-2222</span>
           </div>
 
-          <div className="flex items-center gap-2 col-span-2">
+          <div className="flex items-center gap-1.5 col-span-2 md:pl-2">
             <Mail className="w-5 h-5 text-dark-text"/>
             <span>starbuck-curling@example.com</span>
           </div>
 
-          <div className="flex items-center gap-2 col-span-2">
+          <div className="flex items-center gap-1.5 col-span-2">
             <MapPin className="w-5 h-5 text-dark-text"/>
             <span>60 Arena Blvd, Starbuck, MB R0G 2P0</span>
           </div>

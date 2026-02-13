@@ -2,7 +2,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="p-6 flex justify-center bg-website-bg text-sm md:text-base lg:text-lg">
+    <footer className="p-6 flex justify-center bg-gray-900 text-sm md:text-base lg:text-lg">
       <div>
         <span
           className="text-body text-white">

@@ -20,7 +20,7 @@ const HeroLogo = ({backgroundImage, logo}) => {
         <img
           src={logo}
           alt="Hero Logo"
-          className="max-h-[60%] max-w-[70%] object-contain drop-shadow-xl"
+          className="max-h-[55%] max-w-[60%] sm:max-w-[70%] object-contain drop-shadow-xl"
         />
       </div>
 
@@ -29,7 +29,7 @@ const HeroLogo = ({backgroundImage, logo}) => {
         <svg
           viewBox="0 0 1440 100"
           preserveAspectRatio="none"
-          className="w-full h-30 fill-website-bg"
+          className="w-full h-35 fill-website-bg"
         >
           <path d="M0,30 C240,90 480,10 720,40 960,70 1200,60 1440,20 L1440,100 L0,100 Z"/>
         </svg>
