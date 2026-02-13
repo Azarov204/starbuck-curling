@@ -11,37 +11,8 @@ const Leagues = () => {
         description="Different Leagues we offer at the Starbuck Curling Club"
       ></HeroText>
       <div className="container">
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
-        <h1>Leagues Page</h1>
+        <h1>Men's League</h1>
+        <h1>Women's League</h1>
       </div>
       <Contact/>
     </>
