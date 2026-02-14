@@ -2,45 +2,50 @@ import logo_1 from "../../assets/sponsors/east_meridian_electric.png";
 import logo_2 from "../../assets/sponsors/meridian_hauling.jpg";
 import logo_3 from "../../assets/sponsors/one_insurance.png";
 import logo_4 from "../../assets/sponsors/perfectly_raw.jpg";
-import logo_5 from "../../assets/sponsors/phils_honey.webp";
+import logo_5 from "../../assets/sponsors/phils_honey.jpg";
 import logo_6 from "../../assets/sponsors/rocky_mountain_equipment.jpg";
 import logo_7 from "../../assets/sponsors/terraco.jpg";
-import Logo from "./Logo.jsx";
+import SponsorCard from "./SponsorCard.jsx";
+
+const sponsors = [
+  {src: logo_1, alt: "East Meridian Electric", link: "https://www.eastmeridianelectric.com"},
+  {src: logo_2, alt: "Meridian Hauling", link: "https://meridianhauling.ca"},
+  {src: logo_3, alt: "One Insurance", link: "https://www.oneinsurance.ca"},
+  {src: logo_4, alt: "Perfectly Raw", link: "https://perfectlyraw.ca"},
+  {src: logo_5, alt: "Phil's honey", link: "https://www.philshoney.com"},
+  {src: logo_6, alt: "Rocky Mountain Equipment", link: "https://rockymtn.com"},
+  {src: logo_7, alt: "Terraco", link: "https://www.terraco.ca"},
+];
 
 const Sponsors = () => {
 
   return (
-    <div className="py-6">
-      {/* Title */}
-      <h2 className="text-center text-2xl md:text-4xl font-bold tracking-wide">
-        OUR WONDERFUL SPONSORS
-      </h2>
-      <div
-        className="group relative overflow-hidden bg-white
-       whitespace-nowrap py-6 my-5 w-[90%] max-w-7xl m-auto
-        mask-[linear-gradient(to_right,transparent_0,white_32px,white_calc(100%-32px),transparent_100%)]
-        md:mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]"
-      >
-        <div className="animate-slide-left inline-block w-max h-12 md:h-24">
-          <Logo image={logo_1} link="https://www.eastmeridianelectric.com/"/>
-          <Logo image={logo_2} link="https://meridianhauling.ca/"/>
-          <Logo image={logo_3} link="https://www.oneinsurance.ca/"/>
-          <Logo image={logo_4} link="https://perfectlyraw.ca/"/>
-          <Logo image={logo_5} link="https://www.philshoney.com/"/>
-          <Logo image={logo_6} link="https://rockymtn.com/"/>
-          <Logo image={logo_7} link="https://www.terraco.ca/"/>
-        </div>
-        <div className="animate-slide-left inline-block w-max h-12 md:h-24">
-          <Logo image={logo_1} link="https://www.eastmeridianelectric.com/"/>
-          <Logo image={logo_2} link="https://meridianhauling.ca/"/>
-          <Logo image={logo_3} link="https://www.oneinsurance.ca/"/>
-          <Logo image={logo_4} link="https://perfectlyraw.ca/"/>
-          <Logo image={logo_5} link="https://www.philshoney.com/"/>
-          <Logo image={logo_6} link="https://rockymtn.com/"/>
-          <Logo image={logo_7} link="https://www.terraco.ca/"/>
+    <section className="w-full py-12 bg-white">
+      <div className="mx-auto max-w-7xl px-4">
+        {/* Title */}
+        <h2 className="mb-8 text-center text-lx font-bold tracking-widest text-gray-900">
+          OUR WONDERFUL SPONSORS
+        </h2>
+
+        {/* Sponsor Cards */}
+        <div className="flex flex-wrap justify-center gap-5">
+          {sponsors.map((logo, index) => (
+            <div
+              key={index}
+              className="
+                flex justify-center
+                w-[33.333%]
+                sm:w-[25%]
+                md:w-[20%]
+                lg:w-[16.666%]
+              "
+            >
+              <SponsorCard src={logo.src} link={logo.link} alt={logo.alt}/>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
