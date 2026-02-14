@@ -78,11 +78,11 @@ const Contact = () => {
             <label className="block mb-2">
               *Message
             </label>
-            <textarea rows={6} className="w-full rounded-sm px-3 py-2 focus:outline-none border bg-white"/>
+            <textarea rows={3} className="w-full rounded-sm px-3 py-1 focus:outline-none border bg-white"/>
           </div>
 
           {/* Submit */}
-          <div className="flex justify-center pt-3 pb-8">
+          <div className="flex justify-center pt-3 pb-4">
             <button className="px-8 py-2 bg-amber-900 hover:bg-amber-800 text-white rounded-sm transition">
               Submit
             </button>
