@@ -9,10 +9,10 @@ const Leagues = () => {
         backgroundImage={image}
         title="Leagues"
         description="Different Leagues we offer at the Starbuck Curling Club"
-      ></HeroText>
+      />
       <div className="container">
-        <h1>Men's League</h1>
-        <h1>Women's League</h1>
+        <h1 className="mx-auto max-w-7xl px-12 text-2xl">Men's League</h1>
+        <h1 className="mx-auto max-w-7xl p-12 text-2xl">Women's League</h1>
       </div>
       <Contact/>
     </>
