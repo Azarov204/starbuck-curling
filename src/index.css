@@ -11,6 +11,27 @@
     --color-header-text-hover-dark: #838383;
 
     --color-sponsor-dark-text: #121212;
+
+    --global-text-dark: #121212;
+}
+
+@layer base {
+    p {
+        @apply text-sm sm:text-base lg:text-lg;
+    }
+
+    h1 {
+        @apply text-2xl sm:text-3xl lg:text-4xl;
+    }
+
+    h2 {
+        @apply text-xl sm:text-2xl lg:text-3xl;
+    }
+
+    h3 {
+        @apply text-lg sm:text-xl lg:text-2xl;
+    }
+
 }
 
 @layer utilities {
