@@ -37,7 +37,7 @@ const Header = () => {
       className={`fixed top-0 z-50 w-full
       bg-header-light/90
       text-header-text-dark
-      backdrop-blur-sm
+      backdrop-blur-xs
       transition-all duration-300 
       ${showNav ? "translate-y-0" : "-translate-y-full"}
       md:translate-y-0`}
@@ -129,7 +129,7 @@ const Header = () => {
           isOpen ? "max-h-60" : "max-h-0"
         }`}
       >
-        <div className="md:hidden bg-header-light p-4 text-lg">
+        <div className="md:hidden p-4 text-lg">
           <div className="flex flex-col space-y-3 justify-center items-center w-full">
             <NavLink
               to="/starbuck-curling/"
