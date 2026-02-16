@@ -1,4 +1,4 @@
-const SponsorCard = ({src, alt, link}) => {
+const SponsorCardPlatinum = ({src, alt, link}) => {
 
   return (
     <div className="flex items-center justify-center">
@@ -8,10 +8,10 @@ const SponsorCard = ({src, alt, link}) => {
           alt={alt}
           loading="lazy"
           className="
-          max-h-18
-          sm:max-h-22
-          md:max-h-26
-          lg:max-h-30
+          max-h-22
+          sm:max-h-26
+          md:max-h-30
+          lg:max-h-34
           w-auto
           object-contain
           transition-all
@@ -27,4 +27,4 @@ const SponsorCard = ({src, alt, link}) => {
   );
 }
 
-export default SponsorCard;
+export default SponsorCardPlatinum;

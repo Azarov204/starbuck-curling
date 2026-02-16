@@ -9,6 +9,8 @@
     /* Text Colours*/
     --color-header-text-dark: #121212;
     --color-header-text-hover-dark: #838383;
+
+    --color-sponsor-dark-text: #121212;
 }
 
 @layer utilities {
