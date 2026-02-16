@@ -1,6 +1,6 @@
 import HeroText from "../../components/Hero/HeroText";
 import Contact from "../../components/Contact/Contact.jsx";
-import image from "../../assets/images/image_1_crop.jpg";
+import image from "../../assets/heros/image_1_crop.jpg";
 import toque_front from "../../assets/merch/toque_front.png";
 import toque_back from "../../assets/merch/toque_back.png";
 import hoodie_front from "../../assets/merch/hoodie_front.png";

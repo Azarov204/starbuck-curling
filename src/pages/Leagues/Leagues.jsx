@@ -1,5 +1,5 @@
 import HeroText from "../../components/Hero/HeroText";
-import image from "../../assets/images/image_2_crop.jpg";
+import image from "../../assets/heros/image_2_crop.jpg";
 import Contact from "../../components/Contact/Contact.jsx";
 
 const Leagues = () => {
