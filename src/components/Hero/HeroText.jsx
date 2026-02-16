@@ -1,7 +1,7 @@
 const HeroText = ({backgroundImage, title, description}) => {
 
   return (
-    <section className="relative w-full h-120 sm:h-170 overflow-hidden">
+    <section className="relative w-full h-110 sm:h-150 lg:h-170 overflow-hidden">
 
       {/* Background Image */}
       <div

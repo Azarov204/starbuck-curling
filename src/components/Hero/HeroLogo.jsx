@@ -1,7 +1,7 @@
 const HeroLogo = ({backgroundImage, logo}) => {
 
   return (
-    <section className="relative w-full h-120 md:h-170 overflow-hidden">
+    <section className="relative w-full h-110 md:h-150 lg:h-170 overflow-hidden">
 
       {/* Background Image */}
       <div
