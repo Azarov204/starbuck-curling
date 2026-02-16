@@ -2,12 +2,13 @@
 
 @theme {
     /* Background Colours */
+    --color-header-light: #fffff6;
     --color-starbuck: #FFF2BE;
     --color-website-bg: #8897a8;
 
     /* Text Colours*/
-    --color-dark-text: #121212;
-    --color-dark-hover: #838383;
+    --color-header-text-dark: #121212;
+    --color-header-text-hover-dark: #838383;
 }
 
 @layer utilities {

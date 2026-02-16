@@ -3,8 +3,8 @@ import {useEffect, useState} from "react";
 import logo from "../../assets/logos/starbuck_2.png";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -13,13 +13,13 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       // Shrink logic (desktop + mobile)
-      setScrolled(currentScrollY > 50);
+      setHasScrolled(currentScrollY > 50);
 
       // Mobile hide/show logic
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         // scrolling DOWN
         setShowNav(false);
-        setOpen(false);
+        setIsOpen(false);
       } else {
         // scrolling UP
         setShowNav(true);
@@ -35,7 +35,8 @@ const Header = () => {
   return (
     <nav
       className={`fixed top-0 z-50 w-full
-      bg-white/80
+      bg-header-light/90
+      text-header-text-dark
       backdrop-blur-sm
       transition-all duration-300 
       ${showNav ? "translate-y-0" : "-translate-y-full"}
@@ -51,45 +52,65 @@ const Header = () => {
           className="text-lg font-bold tracking-wide"
         >
           <img src={logo} alt="Starbuck Curling Club Logo"
-               className={`transition-all duration-300 ${scrolled ? "h-20" : "h-24"}`}/>
+               className={`transition-all duration-300 py-4 sm:py-2 ${hasScrolled ? "h-20" : "h-24"}`}/>
         </NavLink>
 
         {/* Hamburger (mobile) */}
         <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-1 p-3 cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden flex flex-col gap-0.75 p-3 cursor-pointer"
           aria-label="Toggle menu"
         >
-          <span className="h-0.5 w-6 bg-black"></span>
-          <span className="h-0.5 w-9 bg-black"></span>
-          <span className="h-0.5 w-6 bg-black"></span>
+          {isOpen ? (
+              // Curling stone aiming left
+              <>
+                <span className="h-0.5 w-4 ml-2.5 bg-header-text-dark"></span>
+                <span className="h-0.5 w-2 ml-2 bg-header-text-dark"></span>
+                <span className="h-0.5 w-8 ml-1 bg-header-text-dark"></span>
+                <span className="h-0.5 w-10 bg-header-text-dark"></span>
+                <span className="h-0.5 w-10  bg-header-text-dark"></span>
+                <span className="h-0.5 w-8 ml-1 bg-header-text-dark"></span>
+              </>
+            ) :
+            // Curling stone aiming right
+            <>
+              <span className="h-0.5 w-4 ml-3.5 bg-header-text-dark"></span>
+              <span className="h-0.5 w-2 ml-6 bg-header-text-dark"></span>
+              <span className="h-0.5 w-8 ml-1 bg-header-text-dark"></span>
+              <span className="h-0.5 w-10 bg-header-text-dark"></span>
+              <span className="h-0.5 w-10 bg-header-text-dark"></span>
+              <span className="h-0.5 w-8 ml-1 bg-header-text-dark"></span>
+            </>
+          }
         </button>
 
         {/* Desktop links */}
-        <div className={`hidden md:flex space-x-6 transition-all duration-300 ${scrolled ? "text-base" : "text-lg"}`}>
-          <NavLink to="/starbuck-curling/" className="hover:text-dark-hover">
+        <div
+          className={`hidden md:flex space-x-6 transition-all duration-300 ${hasScrolled ? "text-base" : "text-lg"}`}>
+          <NavLink to="/starbuck-curling/" className="hover:text-header-text-hover-dark">
             Home
           </NavLink>
           <NavLink
             to="/starbuck-curling/about"
-            className="hover:text-dark-hover"
+            className="hover:text-header-text-hover-dark"
           >
             About
           </NavLink>
           <NavLink
             to="/starbuck-curling/leagues"
-            className="hover:text-dark-hover"
+            className="hover:text-header-text-hover-dark"
           >
             Leagues
           </NavLink>
           <NavLink
             to="/starbuck-curling/merch"
-            className="hover:text-dark-hover"
+            className="hover:text-header-text-hover-dark"
           >
             Merch
           </NavLink>
           <NavLink
             to="/#contact"
+            className="hover:text-header-text-hover-dark"
             onClick={(e) => {
               e.preventDefault();
               document
@@ -105,47 +126,48 @@ const Header = () => {
       {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${
-          open ? "max-h-60" : "max-h-0"
+          isOpen ? "max-h-60" : "max-h-0"
         }`}
       >
-        <div className="md:hidden bg-starbuck p-4 text-lg">
+        <div className="md:hidden bg-header-light p-4 text-lg">
           <div className="flex flex-col space-y-3 justify-center items-center w-full">
             <NavLink
               to="/starbuck-curling/"
-              onClick={() => setOpen(false)}
-              className="hover:text-dark-hover"
+              className="hover:text-header-text-hover-dark"
+              onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
               to="/starbuck-curling/about"
-              onClick={() => setOpen(false)}
-              className="hover:text-dark-hover"
+              className="hover:text-header-text-hover-dark"
+              onClick={() => setIsOpen(false)}
             >
               About
             </NavLink>
             <NavLink
               to="/starbuck-curling/leagues"
-              onClick={() => setOpen(false)}
-              className="hover:text-dark-hover"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-header-text-hover-dark"
             >
               Leagues
             </NavLink>
             <NavLink
               to="/starbuck-curling/merch"
-              onClick={() => setOpen(false)}
-              className="hover:text-dark-hover"
+              className="hover:text-header-text-hover-dark"
+              onClick={() => setIsOpen(false)}
             >
               Merch
             </NavLink>
             <NavLink
               to="/#contact"
+              className="hover:text-header-text-hover-dark"
               onClick={(e) => {
                 e.preventDefault();
                 document
                   .getElementById("contact")
                   ?.scrollIntoView({behavior: "smooth"});
-                setOpen(false);
+                setIsOpen(false);
               }}
             >
               Contact
