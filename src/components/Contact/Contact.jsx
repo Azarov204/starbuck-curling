@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="flex justify-center items-center min-h-60 bg-starbuck">
-      <div className="w-full max-w-6xl bg-starbuck p-10 rounded-md">
+      <div className="w-full max-w-6xl bg-starbuck px-10 py-6 rounded-md">
         {/* Title */}
         <h2 className="text-center text-2xl font-bold tracking-wide">
           GET IN TOUCH WITH US
@@ -93,12 +93,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto space-y-2 font-bold grid grid-cols-1 md:grid-cols-5">
           <div className="flex items-center gap-1.5 col-span-1">
             <Phone className="w-5 h-5 text-dark-text"/>
-            <span>(123) 222-2222</span>
+            <span>(204) 735-2463</span>
           </div>
 
           <div className="flex items-center gap-1.5 col-span-2 md:pl-2">
             <Mail className="w-5 h-5 text-dark-text"/>
-            <span>starbuck-curling@example.com</span>
+            <span>starbuckmenscurling@gmail.com</span>
           </div>
 
           <div className="flex items-center gap-1.5 col-span-2">
