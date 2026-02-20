@@ -8,6 +8,7 @@ import Merch from "./pages/Merch/Merch";
 import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
+import Facility from "./pages/Facility/Facility.jsx";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/starbuck-curling/" element={<Home/>}/>
         <Route path="/starbuck-curling/about" element={<About/>}/>
+        <Route path="/starbuck-curling/facility" element={<Facility/>}/>
         <Route path="/starbuck-curling/leagues" element={<Leagues/>}/>
         <Route path="/starbuck-curling/merch" element={<Merch/>}/>
         <Route path="/starbuck-curling/*" element={<NotFound/>}/>

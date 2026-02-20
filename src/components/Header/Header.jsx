@@ -40,17 +40,14 @@ const Header = () => {
       backdrop-blur-xs
       transition-all duration-300 
       ${showNav ? "translate-y-0" : "-translate-y-full"}
-      md:translate-y-0`}
+      lg:translate-y-0`}
     >
       <div
         className={`mx-auto max-w-7xl px-6 flex items-center
         justify-between transition-all duration-300`}
       >
         {/* Logo */}
-        <NavLink
-          to="/starbuck-curling/"
-          className="text-lg font-bold tracking-wide"
-        >
+        <NavLink to="/starbuck-curling/">
           <img src={logo} alt="Starbuck Curling Club Logo"
                className={`transition-all duration-300 py-4 sm:py-2 ${hasScrolled ? "h-20" : "h-24"}`}/>
         </NavLink>
@@ -58,7 +55,7 @@ const Header = () => {
         {/* Hamburger (mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex flex-col gap-0.75 p-3 cursor-pointer"
+          className="lg:hidden flex flex-col gap-0.75 p-3 cursor-pointer"
           aria-label="Toggle menu"
         >
           {isOpen ? (
@@ -86,7 +83,7 @@ const Header = () => {
 
         {/* Desktop links */}
         <div
-          className={`hidden md:flex space-x-6 transition-all duration-300 ${hasScrolled ? "text-base" : "text-lg"}`}>
+          className={`hidden lg:flex space-x-8 transition-all duration-300 ${hasScrolled ? "text-base" : "text-lg"}`}>
           <NavLink to="/starbuck-curling/" className="hover:text-header-text-hover-dark">
             Home
           </NavLink>
@@ -101,6 +98,12 @@ const Header = () => {
             className="hover:text-header-text-hover-dark"
           >
             Leagues
+          </NavLink>
+          <NavLink
+            to="/starbuck-curling/facility"
+            className="hover:text-header-text-hover-dark"
+          >
+            Facility & Rentals
           </NavLink>
           <NavLink
             to="/starbuck-curling/merch"
@@ -125,11 +128,11 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-400 ease-in-out ${
+        className={`lg:hidden overflow-hidden transition-all duration-400 ease-in-out ${
           isOpen ? "max-h-60" : "max-h-0"
         }`}
       >
-        <div className="md:hidden p-4 text-lg">
+        <div className="lg:hidden p-4 text-lg">
           <div className="flex flex-col space-y-3 justify-center items-center w-full">
             <NavLink
               to="/starbuck-curling/"
@@ -151,6 +154,13 @@ const Header = () => {
               className="hover:text-header-text-hover-dark"
             >
               Leagues
+            </NavLink>
+            <NavLink
+              to="/starbuck-curling/facility"
+              className="hover:text-header-text-hover-dark"
+              onClick={() => setIsOpen(false)}
+            >
+              Facility & Rentals
             </NavLink>
             <NavLink
               to="/starbuck-curling/merch"
