@@ -9,12 +9,12 @@ const About = () => {
         backgroundImage={image}
         title="About Us"
         description="Starbuck Curling Club"
-      ></HeroText>
+      />
       <div className="container">
-        <h1 className="mx-auto max-w-7xl p-12 text-2xl">
+        <p className="mx-auto max-w-7xl p-12">
           The Starbuck Curling Club has been around for a long long long long long time.
           More information about the club. We have beer for $5 and popcorn and milk...
-        </h1>
+        </p>
       </div>
       <Contact/>
     </>

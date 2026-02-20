@@ -16,10 +16,10 @@ const HeroText = ({backgroundImage, title, description}) => {
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/60 to-white/60"/>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-start px-[15%] h-full text-dark-text">
+      <div className="max-w-7xl h-full mx-auto pr-[20%] relative flex justify-center items-center text-dark-text">
         <div>
-          <h1 className="text-left text-6xl sm:text-8xl font-bold tracking-wide">{title}</h1>
-          <p className="text-left text-xl sm:text-3xl tracking-wide">{description}</p>
+          <h1 className="font-bold text-5xl xs:text-6xl sm:text-7xl lg:text-8xl">{title}</h1>
+          <h5>{description}</h5>
         </div>
       </div>
 
