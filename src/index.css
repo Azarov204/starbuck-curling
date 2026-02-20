@@ -4,7 +4,7 @@
     /* Background Colours */
     --color-header-light: #fffff6;
     --color-starbuck: #FFF2BE;
-    --color-website-bg: #8897a8;
+    --color-website-bg: #9dabbb;
 
     /* Text Colours*/
     --color-header-text-dark: #121212;
@@ -21,14 +21,26 @@
     }
 
     h1 {
-        @apply text-2xl sm:text-3xl lg:text-4xl;
+        @apply text-5xl sm:text-6xl lg:text-7xl;
     }
 
     h2 {
-        @apply text-xl sm:text-2xl lg:text-3xl;
+        @apply text-4xl sm:text-5xl lg:text-6xl;
     }
 
     h3 {
+        @apply text-3xl sm:text-4xl lg:text-5xl;
+    }
+
+    h4 {
+        @apply text-2xl sm:text-3xl lg:text-4xl;
+    }
+
+    h5 {
+        @apply text-xl sm:text-2xl lg:text-3xl;
+    }
+
+    h6 {
         @apply text-lg sm:text-xl lg:text-2xl;
     }
 
