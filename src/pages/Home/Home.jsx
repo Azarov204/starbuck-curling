@@ -36,39 +36,15 @@ const images = [
   },
 ]
 
-// const images = [
-//   {
-//     url: "../../assets/photos/IMG_5257.jpg",
-//     alt: "Beer",
-//   },
-//   {
-//     url: "../../assets/photos/IMG_5333.jpg",
-//     alt: "Grant behind bar",
-//   },
-//   {
-//     url: "../../assets/photos/IMG_5352.jpg",
-//     alt: "Pitcher of beer",
-//   },
-//   {
-//     url: "../../assets/photos/IMG_7960.jpg",
-//     alt: "Glow Curling",
-//   },
-//   {
-//     url: "../../assets/photos/IMG_8064.jpg",
-//     alt: "Beer thingy",
-//   },
-// ]
-
-
 const Home = () => {
   return (
     <>
       <HeroLogo backgroundImage={bg} logo={logo}></HeroLogo>
       <div>
         <Poster image={poster}/>
-        <h1 className="mx-auto max-w-7xl p-12 text-2xl">
+        <h6 className="mx-auto max-w-7xl p-12">
           The Starbuck Curling Club has been around for a long long long long long time.
-        </h1>
+        </h6>
       </div>
       <SlideShow images={images}/>
       <Sponsors/>
