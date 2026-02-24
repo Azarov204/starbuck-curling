@@ -36,6 +36,29 @@ const images = [
   },
 ]
 
+// const images = [
+//   {
+//     url: "../../assets/photos/IMG_5257.jpg",
+//     alt: "Beer",
+//   },
+//   {
+//     url: "../../assets/photos/IMG_5333.jpg",
+//     alt: "Grant behind bar",
+//   },
+//   {
+//     url: "../../assets/photos/IMG_5352.jpg",
+//     alt: "Pitcher of beer",
+//   },
+//   {
+//     url: "../../assets/photos/IMG_7960.jpg",
+//     alt: "Glow Curling",
+//   },
+//   {
+//     url: "../../assets/photos/IMG_8064.jpg",
+//     alt: "Beer thingy",
+//   },
+// ]
+
 
 const Home = () => {
   return (
