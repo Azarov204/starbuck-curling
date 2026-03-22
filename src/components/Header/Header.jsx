@@ -129,7 +129,7 @@ const Header = () => {
       {/* Mobile menu */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-400 ease-in-out ${
-          isOpen ? "max-h-60" : "max-h-0"
+          isOpen ? "max-h-80" : "max-h-0"
         }`}
       >
         <div className="lg:hidden p-4 text-lg">
