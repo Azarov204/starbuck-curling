@@ -12,7 +12,7 @@ import Facility from "./pages/Facility/Facility.jsx";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-website-bg text-dark-text overflow-hidden">
+    <div className="min-h-screen bg-website-bg-1 text-dark-text overflow-hidden">
       <Header/>
       <ScrollToTop/>
       <Routes>
