@@ -1,7 +1,7 @@
 const HeroText = ({backgroundImage, title, description}) => {
 
   return (
-    <section className="relative w-full h-110 sm:h-150 lg:h-170 overflow-hidden">
+    <section className="relative w-full h-100 sm:h-110 md:h-130 lg:h-160 overflow-hidden">
 
       {/* Background Image */}
       <div
@@ -16,9 +16,9 @@ const HeroText = ({backgroundImage, title, description}) => {
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/60 to-white/60"/>
 
       {/* Content */}
-      <div className="max-w-7xl h-full mx-auto pr-[20%] relative flex justify-center items-center text-dark-text">
+      <div className="max-w-7xl h-full mx-auto pr-[10%] relative flex justify-center items-center text-dark-text">
         <div>
-          <h1 className="font-bold text-5xl xs:text-6xl sm:text-7xl lg:text-8xl">{title}</h1>
+          <h1 className="font-bold lg:text-8xl pb-2">{title}</h1>
           <h5>{description}</h5>
         </div>
       </div>
@@ -28,7 +28,7 @@ const HeroText = ({backgroundImage, title, description}) => {
         <svg
           viewBox="0 0 1440 100"
           preserveAspectRatio="none"
-          className="w-full h-35 fill-website-bg"
+          className="w-full h-25 sm:h-35 md:h-45 lg:h-55 fill-website-bg"
         >
           <path d="M0,30 C240,90 480,10 720,40 960,70 1200,60 1440,20 L1440,100 L0,100 Z"/>
         </svg>
