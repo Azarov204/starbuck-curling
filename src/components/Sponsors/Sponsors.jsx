@@ -12,9 +12,12 @@ import silver_3 from "../../assets/sponsors/silver/extreme_coatings.png";
 import silver_4 from "../../assets/sponsors/silver/enns_brothers.jpg";
 import silver_5 from "../../assets/sponsors/silver/rosenort_motors.jpg";
 
+import sponsorship_package from "./../../assets/sponsors/sponsorship_package.jpg";
+
 import SponsorCardPlatinum from "./SponsorCardPlatinum.jsx";
 import SponsorCardGold from "./SponsorCardGold.jsx";
 import SponsorCardSilver from "./SponsorCardSilver.jsx";
+
 
 const platSponsors = [
   {src: plat_1, alt: "Perfectly Raw", link: "https://perfectlyraw.ca"},
@@ -39,7 +42,7 @@ const silverSponsors = [
 const Sponsors = () => {
 
   return (
-    <section className="w-full py-12 bg-white">
+    <section className="w-full py-8 bg-white">
       <div className="mx-auto max-w-7xl px-4">
         {/* Title */}
         <h2 className="mb-8 text-center text-2xl md:text-3xl font-bold tracking-widest text-sponsor-dark-text">
@@ -48,19 +51,18 @@ const Sponsors = () => {
 
         {/* All Sponsor Cards */}
         <div className="">
-
           {/* Platinum Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-12 md:w-32 bg-gray-400"></span>
-            <h2
-              className="px-3 text-center text-base md:text-xl font-bold tracking-widest text-shadow-xs text-gray-400">
+            <h6
+              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-400">
               PLATINUM SPONSORS
-            </h2>
+            </h6>
             <span className="h-0.5 w-12 md:w-32 bg-gray-400"></span>
           </div>
 
           {/* Platinum Sponsor Cards */}
-          <div className="flex flex-wrap justify-center pb-8">
+          <div className="flex flex-wrap justify-center pb-8 pt-2">
             {platSponsors.map((logo, index) => (
               <div
                 key={index}
@@ -78,10 +80,10 @@ const Sponsors = () => {
           {/* Gold Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-10 md:w-26 bg-yellow-400"></span>
-            <h2
-              className="px-3 text-center text-base md:text-xl font-bold tracking-widest text-shadow-xs text-yellow-400">
+            <h6
+              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-yellow-400">
               GOLD SPONSORS
-            </h2>
+            </h6>
             <span className="h-0.5 w-10 md:w-26 bg-yellow-400"></span>
           </div>
           {/* Gold Sponsor Cards */}
@@ -103,15 +105,15 @@ const Sponsors = () => {
           {/* Silver Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-8 md:w-20 bg-gray-500"></span>
-            <h2
-              className="px-3 text-center text-base md:text-xl font-bold tracking-widest text-shadow-xs text-gray-500">
+            <h6
+              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-500">
               SILVER SPONSORS
-            </h2>
+            </h6>
             <span className="h-0.5 w-8 md:w-20 bg-gray-500"></span>
           </div>
 
           {/* Silver Sponsor Cards */}
-          <div className="flex flex-wrap justify-center gap-5 pt-1">
+          <div className="flex flex-wrap justify-center gap-5 pt-2">
             {silverSponsors.map((logo, index) => (
               <div
                 key={index}
@@ -128,8 +130,22 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
+      <p className="mx-auto max-w-4xl px-10 text-center pt-6 text-sponsor-dark-text">
+        Thank you to our wonderful sponsors who make everything possible.
+        Interested in joining our community?
+        Check out our{" "}
+        <a
+          href={sponsorship_package}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline cursor-pointer"
+        >
+          sponsorship package
+        </a>
+        , we’d love to hear from you!
+      </p>
     </section>
   );
-};
+}
 
 export default Sponsors;
