@@ -7,7 +7,6 @@ import hoodie_front from "../../assets/merch/hoodie_front.png";
 import MerchCard from "../../components/Merch/MerchCard.jsx";
 
 const Merch = () => {
-  //mx-auto max-w-7xl p-12 text-2xl
   return (
     <>
       <HeroText
