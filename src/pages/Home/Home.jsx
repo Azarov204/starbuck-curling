@@ -1,52 +1,54 @@
-import "./Home.css";
 import HeroLogo from "../../components/Hero/HeroLogo";
-import hero_image from "../../assets/images/image_2_crop.jpg";
-import hero_logo from "../../assets/logos/starbuck_1.png";
-import Footer from "../../components/Footer/Footer";
+import Contact from "../../components/Contact/Contact";
+import Poster from "../../components/Poster/Poster.jsx";
+import Sponsors from "../../components/Sponsors/Sponsors.jsx";
+import SlideShow from "../../components/SlideShow/SlideShow.jsx";
+import bg from "../../assets/heros/image_2_crop.jpg";
+import logo from "../../assets/logos/starbuck_1.png";
+import poster from "../../assets/posters/poster.png";
+
+import beer from "../../assets/photos/IMG_5257.jpg";
+import bar from "../../assets/photos/IMG_5333.jpg";
+import pitcher from "../../assets/photos/IMG_5352.jpg";
+import glow from "../../assets/photos/IMG_7960.jpg";
+import beerPourer from "../../assets/photos/IMG_8064.jpg";
+
+const images = [
+  {
+    url: beer,
+    alt: "Beer",
+  },
+  {
+    url: bar,
+    alt: "Grant behind bar",
+  },
+  {
+    url: pitcher,
+    alt: "Pitcher of beer",
+  },
+  {
+    url: glow,
+    alt: "Glow Curling",
+  },
+  {
+    url: beerPourer,
+    alt: "Beer thingy",
+  },
+]
 
 const Home = () => {
   return (
     <>
-      <HeroLogo image={hero_image} logo={hero_logo}></HeroLogo>
-      <div className="container">
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <h1>Home home home</h1>
-        <Footer />
+      <HeroLogo backgroundImage={bg} logo={logo}></HeroLogo>
+      <div>
+        <Poster image={poster}/>
+        <h6 className="mx-auto max-w-7xl p-12">
+          The Starbuck Curling Club has been around for a long long long long long time.
+        </h6>
       </div>
+      <SlideShow images={images}/>
+      <Sponsors/>
+      <Contact/>
     </>
   );
 };

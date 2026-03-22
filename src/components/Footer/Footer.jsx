@@ -1,16 +1,15 @@
-import "./Footer.css";
-
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className="footer">
-      <p>© {year} Starbuck Curling Club. All rights reserved.</p>
-      <ul>
-        <li>Designed by Adam Azarov</li>
-        <li>Terms of Service</li>
-      </ul>
-    </div>
+    <footer className="p-6 flex justify-center bg-gray-900 text-sm md:text-base lg:text-lg">
+      <div>
+        <span
+          className="text-body text-white">
+          {`© ${year} Starbuck Curling Club | Designed by Adam Azarov | All rights reserved`}
+        </span>
+      </div>
+    </footer>
   );
 };
 
