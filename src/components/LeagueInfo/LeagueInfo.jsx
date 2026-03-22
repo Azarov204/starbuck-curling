@@ -1,7 +1,7 @@
 const LeagueInfo = ({name, desc, startDay, gameDay, scheduleImg, registerInfo}) => {
 
   return (
-    <div className="mx-auto max-w-7xl px-12 py-10">
+    <div className="mx-auto max-w-7xl px-12 py-4">
       <h4 className="font-bold uppercase">{name}</h4>
       <p>{desc}</p>
       <h6 className="font-bold tracking-tight mt-3">DRAW TIMES</h6>
@@ -14,11 +14,11 @@ const LeagueInfo = ({name, desc, startDay, gameDay, scheduleImg, registerInfo}) 
           Schedule
         </button>
       </a>
-      <h6 className="font-bold tracking-tight">REGISTER</h6>
-      <p>For more information, contact the league rep:</p>
-      <ul className="list-disc pl-5">
-        <li>{registerInfo}</li>
-      </ul>
+      {/*<h6 className="font-bold tracking-tight">REGISTER</h6>*/}
+      {/*<p>For more information, contact the league rep:</p>*/}
+      {/*<ul className="list-disc pl-5">*/}
+      {/*  <li>{registerInfo}</li>*/}
+      {/*</ul>*/}
     </div>
   );
 }

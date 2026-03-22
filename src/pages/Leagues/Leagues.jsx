@@ -12,19 +12,14 @@ const Leagues = () => {
         title="Leagues"
         description="Come play!"
       />
-      <div className="mx-auto max-w-7xl px-12">
-        <p>
+      <div className="mx-auto max-w-6xl px-16 pb-6">
+        <h6 className="text-center py-2">
           The Starbuck Curling Club hosts both men’s and ladies leagues
           that run through the winter from November through March.
-        </p>
-        <p>
-          Our ladies curl on Tuesday nights with the men curling on one of Wednesday and Thursday nights
-        </p>
-
-        <p>
+          Our ladies curl on Tuesday nights with the men curling on one of Wednesday and Thursday nights.
           There is always room for new teams and spares are welcomed. If you’re interested in joining or have
           any questions about any of the men’s or ladies leagues, please reach out using the contact form.
-        </p>
+        </h6>
       </div>
       <LeagueInfo
         name="Men's League"
