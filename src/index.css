@@ -4,7 +4,8 @@
     /* Background Colours */
     --color-header-light: #fffff6;
     --color-starbuck: #FFF2BE;
-    --color-website-bg: #9dabbb;
+    --color-website-bg-1: #9dabbb;
+    --color-website-bg-2: #fffff6;
 
     /* Text Colours*/
     --color-header-text-dark: #121212;
@@ -41,7 +42,7 @@
     }
 
     h6 {
-        @apply text-lg sm:text-xl lg:text-2xl;
+        @apply text-base sm:text-lg lg:text-xl;
     }
 
 }
