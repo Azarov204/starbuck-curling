@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Leagues from "./pages/Leagues/Leagues";
-import Merch from "./pages/Merch/Merch";
 import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
