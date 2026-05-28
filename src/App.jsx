@@ -20,7 +20,6 @@ const App = () => {
         <Route path="/starbuck-curling/about" element={<About/>}/>
         <Route path="/starbuck-curling/facility" element={<Facility/>}/>
         <Route path="/starbuck-curling/leagues" element={<Leagues/>}/>
-        <Route path="/starbuck-curling/merch" element={<Merch/>}/>
         <Route path="/starbuck-curling/*" element={<NotFound/>}/>
       </Routes>
       <Footer/>

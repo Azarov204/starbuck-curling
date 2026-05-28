@@ -106,12 +106,6 @@ const Header = () => {
             Facility & Rentals
           </NavLink>
           <NavLink
-            to="/starbuck-curling/merch"
-            className="hover:text-header-text-hover-dark"
-          >
-            Merch
-          </NavLink>
-          <NavLink
             to="/#contact"
             className="hover:text-header-text-hover-dark"
             onClick={(e) => {
@@ -161,13 +155,6 @@ const Header = () => {
               onClick={() => setIsOpen(false)}
             >
               Facility & Rentals
-            </NavLink>
-            <NavLink
-              to="/starbuck-curling/merch"
-              className="hover:text-header-text-hover-dark"
-              onClick={() => setIsOpen(false)}
-            >
-              Merch
             </NavLink>
             <NavLink
               to="/#contact"
