@@ -2,15 +2,16 @@ import {useState} from "react";
 import {Mail, MapPin, Phone} from "lucide-react";
 
 const Contact = () => {
-
   const [result, setResult] = useState("");
+  const [sendDisabled, setSendDisabled] = useState(false);
+  const [submitButtonString, setSubmitButtonString] = useState("Submit");
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("subject", "New Submission from Starbuck Curling Club Website");
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_EMAIL_KEY + "asd");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -21,9 +22,12 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
+      setSubmitButtonString("Sent!")
       event.target.reset();
+      setSendDisabled(true);
     } else {
       console.log("Error", data);
+      setSubmitButtonString("Error! Try again")
       setResult(data.message);
     }
   };
@@ -39,37 +43,33 @@ const Contact = () => {
 
         {/* FORM */}
         <form className="space-y-2" onSubmit={onSubmit}>
-          {/* Row 1 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          {/* Name */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <label className="block mb-2">
-                *First Name
+                *Name
               </label>
-              <input type="text" className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"/>
+              <input type="text" name="Name"
+                     className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white" required/>
             </div>
 
-            <div>
-              <label className="block mb-2">
-                *Last Name
-              </label>
-              <input type="text" className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"/>
-            </div>
-          </div>
-
-          {/* Row 2 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Email */}
             <div>
               <label className="block mb-2">
                 *Email
               </label>
-              <input type="email" className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"/>
+              <input type="email" name="Email"
+                     className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white" required/>
             </div>
 
+            {/* Phone */}
             <div>
               <label className="block mb-2">
-                *Phone Number
+                Phone Number
               </label>
-              <input type="tel" className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"/>
+              <input type="tel" name="Phone"
+                     className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"/>
             </div>
           </div>
 
@@ -78,13 +78,18 @@ const Contact = () => {
             <label className="block mb-2">
               *Message
             </label>
-            <textarea rows={3} className="w-full rounded-sm px-3 py-1 focus:outline-none border bg-white"/>
+            <textarea rows={7} name="Message"
+                      className="w-full rounded-sm px-3 py-1 focus:outline-none border bg-white" required/>
           </div>
+
+          {/* Hidden form name */}
+          <input type="hidden" name="from_name" value="Starbuck Curling Club Website"/>
 
           {/* Submit */}
           <div className="flex justify-center pt-3 pb-4">
-            <button className="px-8 py-2 bg-amber-900 hover:bg-amber-800 text-white rounded-sm transition">
-              Submit
+            <button type="submit" disabled={sendDisabled}
+                    className="px-8 py-2 w-45 bg-amber-900 enabled:hover:bg-amber-800 disabled:opacity-50 text-white rounded-sm transition">
+              {submitButtonString}
             </button>
           </div>
         </form>
