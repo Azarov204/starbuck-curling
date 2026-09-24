@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
@@ -11,17 +11,17 @@ import Facility from "./pages/Facility/Facility.jsx";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-website-bg-1 text-dark-text overflow-hidden">
-      <Header/>
-      <ScrollToTop/>
+    <div className="flex flex-col min-h-screen bg-website-bg-1 text-dark-text overflow-hidden">
+      <Header />
+      <ScrollToTop />
       <Routes>
-        <Route path="/starbuck-curling/" element={<Home/>}/>
-        <Route path="/starbuck-curling/about" element={<About/>}/>
-        <Route path="/starbuck-curling/facility" element={<Facility/>}/>
-        <Route path="/starbuck-curling/leagues" element={<Leagues/>}/>
-        <Route path="/starbuck-curling/*" element={<NotFound/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/facility" element={<Facility />} />
+        <Route path="/leagues" element={<Leagues />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

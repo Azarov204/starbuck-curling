@@ -11,12 +11,13 @@ const About = () => {
         description="Starbuck Curling Club"
       />
       <div className="container">
-        <p className="mx-auto max-w-7xl p-12">
-          The Starbuck Curling Club has been around for a long long long long long time.
-          More information about the club. We have beer for $5 and popcorn and milk...
+        <p className="mx-auto max-w-7xl px-16 p-12">
+          The Starbuck Curling Club has been around for a long long long long
+          long time. More information about the club. We have beer for $5 and
+          popcorn and milk...
         </p>
       </div>
-      <Contact/>
+      <Contact />
     </>
   );
 };

@@ -47,7 +47,7 @@ const Header = () => {
         justify-between transition-all duration-300`}
       >
         {/* Logo */}
-        <NavLink to="/starbuck-curling/">
+        <NavLink to="/">
           <img src={logo} alt="Starbuck Curling Club Logo"
                className={`transition-all duration-300 py-4 sm:py-2 ${hasScrolled ? "h-20" : "h-24"}`}/>
         </NavLink>
@@ -84,23 +84,23 @@ const Header = () => {
         {/* Desktop links */}
         <div
           className={`hidden lg:flex space-x-8 transition-all duration-300 ${hasScrolled ? "text-base" : "text-lg"}`}>
-          <NavLink to="/starbuck-curling/" className="hover:text-header-text-hover-dark">
+          <NavLink to="/" className="hover:text-header-text-hover-dark">
             Home
           </NavLink>
           <NavLink
-            to="/starbuck-curling/about"
+            to="/about"
             className="hover:text-header-text-hover-dark"
           >
             About
           </NavLink>
           <NavLink
-            to="/starbuck-curling/leagues"
+            to="/leagues"
             className="hover:text-header-text-hover-dark"
           >
             Leagues
           </NavLink>
           <NavLink
-            to="/starbuck-curling/facility"
+            to="/facility"
             className="hover:text-header-text-hover-dark"
           >
             Facility & Rentals
@@ -129,28 +129,28 @@ const Header = () => {
         <div className="lg:hidden p-4 text-lg">
           <div className="flex flex-col space-y-3 justify-center items-center w-full">
             <NavLink
-              to="/starbuck-curling/"
+              to="/"
               className="hover:text-header-text-hover-dark"
               onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
-              to="/starbuck-curling/about"
+              to="/about"
               className="hover:text-header-text-hover-dark"
               onClick={() => setIsOpen(false)}
             >
               About
             </NavLink>
             <NavLink
-              to="/starbuck-curling/leagues"
+              to="/leagues"
               onClick={() => setIsOpen(false)}
               className="hover:text-header-text-hover-dark"
             >
               Leagues
             </NavLink>
             <NavLink
-              to="/starbuck-curling/facility"
+              to="/facility"
               className="hover:text-header-text-hover-dark"
               onClick={() => setIsOpen(false)}
             >

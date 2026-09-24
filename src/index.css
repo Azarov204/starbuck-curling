@@ -1,79 +1,78 @@
 @import "tailwindcss";
 
 @theme {
-    /* Background Colours */
-    --color-header-light: #fffff6;
-    --color-starbuck: #FFF2BE;
-    --color-website-bg-1: #9dabbb;
-    --color-website-bg-2: #fffff6;
+  /* Background Colours */
+  --color-header-light: #fffff6;
+  --color-starbuck: #fff2be;
+  --color-website-bg-1: #9dabbb;
+  --color-website-bg-2: #fffff6;
 
-    /* Text Colours*/
-    --color-header-text-dark: #121212;
-    --color-header-text-hover-dark: #838383;
+  /* Text Colours*/
+  --color-header-text-dark: #121212;
+  --color-header-text-hover-dark: #838383;
 
-    --color-sponsor-dark-text: #121212;
+  --color-sponsor-dark-text: #121212;
 
-    --global-text-dark: #121212;
+  --global-text-dark: #121212;
 }
 
 @layer base {
-    p {
-        @apply text-sm sm:text-base lg:text-lg;
-    }
+  p {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
 
-    h1 {
-        @apply text-5xl sm:text-6xl lg:text-7xl;
-    }
+  h1 {
+    @apply text-5xl sm:text-6xl lg:text-7xl;
+  }
 
-    h2 {
-        @apply text-4xl sm:text-5xl lg:text-6xl;
-    }
+  h2 {
+    @apply text-4xl sm:text-5xl lg:text-6xl;
+  }
 
-    h3 {
-        @apply text-3xl sm:text-4xl lg:text-5xl;
-    }
+  h3 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
 
-    h4 {
-        @apply text-2xl sm:text-3xl lg:text-4xl;
-    }
+  h4 {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
 
-    h5 {
-        @apply text-xl sm:text-2xl lg:text-3xl;
-    }
+  h5 {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
 
-    h6 {
-        @apply text-base sm:text-lg lg:text-xl;
-    }
-
+  h6 {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
 }
 
 @layer utilities {
-    @keyframes slide-left {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100%);
-        }
+  @keyframes slide-left {
+    from {
+      transform: translateX(0);
     }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
-    .animate-slide-left {
-        animation: slide-left 30s linear infinite;
-    }
+  .animate-slide-left {
+    animation: slide-left 30s linear infinite;
+  }
 
-    .perspective {
-        perspective: 1200px;
-    }
+  .perspective {
+    perspective: 1200px;
+  }
 
-    .transform-style-preserve-3d {
-        transform-style: preserve-3d;
-    }
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
 
-    .backface-hidden {
-        backface-visibility: hidden;
-    }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 
-    .rotate-y-180 {
-        transform: rotateY(180deg);
-    }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
 }
