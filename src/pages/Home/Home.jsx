@@ -3,6 +3,7 @@ import Contact from "../../components/Contact/Contact";
 import Poster from "../../components/Poster/Poster.jsx";
 import Sponsors from "../../components/Sponsors/Sponsors.jsx";
 import SlideShow from "../../components/SlideShow/SlideShow.jsx";
+import Map from "../../components/Map/Map.jsx";
 import bg from "../../assets/heros/image_2_crop.jpg";
 import logo from "../../assets/logos/starbuck_1.png";
 import poster from "../../assets/posters/poster.png";
@@ -39,12 +40,16 @@ const images = [
 const Home = () => {
   return (
     <>
-      <HeroLogo backgroundImage={bg} logo={logo}></HeroLogo>
+      <HeroLogo
+        backgroundImage={bg}
+        logo={logo}
+        bottomMaskColor={"var(--color-website-bg-1)"}
+      ></HeroLogo>
       <div className="grow">
         <div className="mx-auto max-w-5xl px-16 pb-12">
-          <h4 className="flex justify-center font-bold pb-4">
+          <h5 className="flex justify-center font-bold pb-4">
             Welcome to the Starbuck Curling Club!
-          </h4>
+          </h5>
           <h6 className="text-center py-2">
             We’re a small-town club in Starbuck, Manitoba where community comes
             first. Home of Ernie’s bar, our strong sense of camaraderie makes
@@ -60,9 +65,10 @@ const Home = () => {
         </div>
       </div>
       <Poster image={poster} />
-      <SlideShow images={images} />
+      {/* <SlideShow images={images} /> */}
       <Sponsors />
       <Contact />
+      <Map />
     </>
   );
 };

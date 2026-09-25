@@ -1,7 +1,13 @@
-const LeagueInfo = ({name, desc, startDay, gameDay, scheduleImg, registerInfo}) => {
-
+const LeagueInfo = ({
+  name,
+  desc,
+  startDay,
+  gameDay,
+  scheduleImg,
+  registerInfo,
+}) => {
   return (
-    <div className="mx-auto max-w-7xl px-12 py-4">
+    <div className="mx-auto max-w-5xl px-12 py-4">
       <h4 className="font-bold uppercase">{name}</h4>
       <p>{desc}</p>
       <h6 className="font-bold tracking-tight mt-3">DRAW TIMES</h6>
@@ -21,6 +27,6 @@ const LeagueInfo = ({name, desc, startDay, gameDay, scheduleImg, registerInfo}) 
       {/*</ul>*/}
     </div>
   );
-}
+};
 
 export default LeagueInfo;

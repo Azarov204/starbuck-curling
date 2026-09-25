@@ -49,7 +49,7 @@
 
 .hero-title {
   @apply font-bold;
-  font-size: clamp(2.25rem, 8vw, 6rem);
+  font-size: clamp(3rem, 8vw, 6rem);
 }
 
 .hero-subtitle {
