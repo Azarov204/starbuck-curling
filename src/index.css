@@ -16,36 +16,6 @@
   --global-text-dark: #121212;
 }
 
-@layer base {
-  p {
-    @apply text-sm sm:text-base lg:text-lg;
-  }
-
-  h1 {
-    @apply text-5xl sm:text-6xl lg:text-7xl;
-  }
-
-  h2 {
-    @apply text-4xl sm:text-5xl lg:text-6xl;
-  }
-
-  h3 {
-    @apply text-3xl sm:text-4xl lg:text-5xl;
-  }
-
-  h4 {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
-  }
-
-  h5 {
-    @apply text-xl sm:text-2xl lg:text-3xl;
-  }
-
-  h6 {
-    @apply text-base sm:text-lg lg:text-xl;
-  }
-}
-
 @layer utilities {
   @keyframes slide-left {
     from {
@@ -75,4 +45,28 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+}
+
+.hero-title {
+  @apply font-bold;
+  font-size: clamp(2.25rem, 8vw, 6rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.hero-background {
+  @apply w-full relative w-full overflow-hidden;
+  height: clamp(25rem, 40vw, 50rem);
+}
+
+.hero-logo {
+  @apply object-contain drop-shadow-xl;
+  height: clamp(13rem, 20vw, 30rem);
+}
+
+.hero-svg-mask-height {
+  @apply w-full;
+  height: clamp(4rem, 10vw, 10rem);
 }

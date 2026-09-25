@@ -1,8 +1,8 @@
-const HeroLogo = ({backgroundImage, logo}) => {
+const HeroLogo = ({ backgroundImage, logo, bottomMaskColor }) => {
+  const svgFillStyle = { fill: bottomMaskColor };
 
   return (
-    <section className="relative w-full h-100 sm:h-110 md:h-130 lg:h-160 overflow-hidden">
-
+    <section className="hero-background">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -13,15 +13,11 @@ const HeroLogo = ({backgroundImage, logo}) => {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/50"/>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/50" />
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full mt-5">
-        <img
-          src={logo}
-          alt="Hero Logo"
-          className="max-h-[55%] max-w-[60%] sm:max-w-[70%] object-contain drop-shadow-xl"
-        />
+        <img src={logo} alt="Hero Logo" className="hero-logo" />
       </div>
 
       {/* SVG Bottom Mask */}
@@ -29,12 +25,12 @@ const HeroLogo = ({backgroundImage, logo}) => {
         <svg
           viewBox="0 0 1440 100"
           preserveAspectRatio="none"
-          className="w-full h-15 sm:h-20 md:h-25 lg:h-30 fill-website-bg-1"
+          className="hero-svg-mask-height"
+          style={svgFillStyle}
         >
-          <path d="M0,30 C240,90 480,10 720,40 960,70 1200,60 1440,20 L1440,100 L0,100 Z"/>
+          <path d="M0,30 C240,90 480,10 720,40 960,70 1200,60 1440,20 L1440,100 L0,100 Z" />
         </svg>
       </div>
-
     </section>
   );
 };
