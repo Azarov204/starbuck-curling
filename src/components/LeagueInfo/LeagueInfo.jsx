@@ -7,17 +7,17 @@ const LeagueInfo = ({
   registerInfo,
 }) => {
   return (
-    <div className="mx-auto max-w-5xl px-12 py-4">
-      <h4 className="font-bold uppercase">{name}</h4>
+    <div className="mx-auto max-w-5xl px-16 py-4">
+      <h3 className="font-bold uppercase">{name}</h3>
       <p>{desc}</p>
-      <h6 className="font-bold tracking-tight mt-3">DRAW TIMES</h6>
+      <p className="font-bold tracking-tight mt-3">DRAW TIMES</p>
       <ul className="list-disc pl-5">
         <li>{startDay}</li>
         <li>{gameDay}</li>
       </ul>
       <a href={scheduleImg} target="_blank" rel="noopener noreferrer">
         <button className="px-8 py-2 my-3 text-header-text-dark bg-starbuck rounded-3xl transition cursor-pointer">
-          Schedule
+          <p>View Schedule</p>
         </button>
       </a>
       {/*<h6 className="font-bold tracking-tight">REGISTER</h6>*/}

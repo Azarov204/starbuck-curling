@@ -18,8 +18,8 @@ const HeroText = ({ backgroundImage, title, description, bottomMaskColor }) => {
       {/* Content */}
       <div className="max-w-7xl h-full mx-auto pr-[10%] relative flex justify-center items-center text-dark-text mt-4">
         <div>
-          <h1 className="hero-title">{title}</h1>
-          <h2 className="hero-subtitle">{description}</h2>
+          <p className="hero-title">{title}</p>
+          <p className="hero-subtitle">{description}</p>
         </div>
       </div>
 

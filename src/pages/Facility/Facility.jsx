@@ -11,8 +11,8 @@ const Facility = () => {
         description="Come eat, drink, and curl!"
         bottomMaskColor={"var(--color-website-bg-1)"}
       />
-      <div>
-        <p className="mx-auto max-w-7xl p-12">
+      <div className="mx-auto max-w-7xl px-16 pb-12">
+        <p className="text-center pb-6">
           Ice rental - $45 per sheet for 2 hours
         </p>
       </div>
