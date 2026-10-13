@@ -11,7 +11,7 @@ import Facility from "./pages/Facility/Facility.jsx";
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-website-bg-1 text-dark-text overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-website-bg-1 overflow-hidden">
       <Header />
       <ScrollToTop />
       <Routes>
