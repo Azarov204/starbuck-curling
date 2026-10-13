@@ -18,46 +18,63 @@ import SponsorCardPlatinum from "./SponsorCardPlatinum.jsx";
 import SponsorCardGold from "./SponsorCardGold.jsx";
 import SponsorCardSilver from "./SponsorCardSilver.jsx";
 
-
 const platSponsors = [
-  {src: plat_1, alt: "Perfectly Raw", link: "https://perfectlyraw.ca"},
-  {src: plat_2, alt: "One Insurance", link: "https://www.oneinsurance.ca"},
-  {src: plat_3, alt: "Access Credit Union", link: "https://accesscu.ca/en/personal"},
+  { src: plat_1, alt: "Perfectly Raw", link: "https://perfectlyraw.ca" },
+  { src: plat_2, alt: "One Insurance", link: "https://www.oneinsurance.ca" },
+  {
+    src: plat_3,
+    alt: "Access Credit Union",
+    link: "https://accesscu.ca/en/personal",
+  },
 ];
 
 const goldSponsors = [
-  {src: gold_1, alt: "East Meridian Electric", link: "https://www.eastmeridianelectric.com"},
-  {src: gold_2, alt: "Terraco", link: "https://www.terraco.ca"},
-  {src: gold_3, alt: "Phil's honey", link: "https://www.philshoney.com"},
+  {
+    src: gold_1,
+    alt: "East Meridian Electric",
+    link: "https://www.eastmeridianelectric.com",
+  },
+  { src: gold_2, alt: "Terraco", link: "https://www.terraco.ca" },
+  { src: gold_3, alt: "Phil's honey", link: "https://www.philshoney.com" },
 ];
 
 const silverSponsors = [
-  {src: silver_1, alt: "Meridian Hauling", link: "https://meridianhauling.ca"},
-  {src: silver_2, alt: "Rocky Mountain Equipment", link: "https://rockymtn.com"},
-  {src: silver_3, alt: "Extreme Coatings", link: "https://www.extremecoatings.ca"},
-  {src: silver_4, alt: "Enns Brother", link: "https://www.ennsbrothers.com"},
-  {src: silver_5, alt: "Rosenort Motors", link: "https://rosenortmotors.com"},
+  {
+    src: silver_1,
+    alt: "Meridian Hauling",
+    link: "https://meridianhauling.ca",
+  },
+  {
+    src: silver_2,
+    alt: "Rocky Mountain Equipment",
+    link: "https://rockymtn.com",
+  },
+  {
+    src: silver_3,
+    alt: "Extreme Coatings",
+    link: "https://www.extremecoatings.ca",
+  },
+  { src: silver_4, alt: "Enns Brother", link: "https://www.ennsbrothers.com" },
+  { src: silver_5, alt: "Rosenort Motors", link: "https://rosenortmotors.com" },
 ];
 
 const Sponsors = () => {
-
   return (
     <section className="w-full py-8 bg-white">
       <div className="mx-auto max-w-7xl px-4">
         {/* Title */}
-        <h2 className="mb-8 text-center text-2xl md:text-3xl font-bold tracking-widest text-sponsor-dark-text">
+        <h2 className="mb-8 text-center text-2xl md:text-3xl font-bold tracking-widest">
           OUR WONDERFUL SPONSORS
         </h2>
 
         {/* All Sponsor Cards */}
-        <div className="">
+        <div className="px-6">
           {/* Platinum Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-12 md:w-32 bg-gray-400"></span>
-            <h6
-              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-400">
+            <p className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-400">
               PLATINUM SPONSORS
-            </h6>
+            </p>
             <span className="h-0.5 w-12 md:w-32 bg-gray-400"></span>
           </div>
 
@@ -72,7 +89,11 @@ const Sponsors = () => {
                 sm:w-[25%]
               "
               >
-                <SponsorCardPlatinum src={logo.src} link={logo.link} alt={logo.alt}/>
+                <SponsorCardPlatinum
+                  src={logo.src}
+                  link={logo.link}
+                  alt={logo.alt}
+                />
               </div>
             ))}
           </div>
@@ -80,10 +101,9 @@ const Sponsors = () => {
           {/* Gold Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-10 md:w-26 bg-yellow-400"></span>
-            <h6
-              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-yellow-400">
+            <p className="px-3 text-center font-bold tracking-widest text-shadow-xs text-yellow-400">
               GOLD SPONSORS
-            </h6>
+            </p>
             <span className="h-0.5 w-10 md:w-26 bg-yellow-400"></span>
           </div>
           {/* Gold Sponsor Cards */}
@@ -97,7 +117,11 @@ const Sponsors = () => {
                 sm:w-[25%]
               "
               >
-                <SponsorCardGold src={logo.src} link={logo.link} alt={logo.alt}/>
+                <SponsorCardGold
+                  src={logo.src}
+                  link={logo.link}
+                  alt={logo.alt}
+                />
               </div>
             ))}
           </div>
@@ -105,10 +129,9 @@ const Sponsors = () => {
           {/* Silver Sponsor Title */}
           <div className="flex flex-wrap justify-center items-center">
             <span className="h-0.5 w-8 md:w-20 bg-gray-500"></span>
-            <h6
-              className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-500">
+            <p className="px-3 text-center font-bold tracking-widest text-shadow-xs text-gray-500">
               SILVER SPONSORS
-            </h6>
+            </p>
             <span className="h-0.5 w-8 md:w-20 bg-gray-500"></span>
           </div>
 
@@ -124,16 +147,19 @@ const Sponsors = () => {
                 md:w-[18%]
               "
               >
-                <SponsorCardSilver src={logo.src} link={logo.link} alt={logo.alt}/>
+                <SponsorCardSilver
+                  src={logo.src}
+                  link={logo.link}
+                  alt={logo.alt}
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
-      <p className="mx-auto max-w-4xl px-10 text-center pt-6 text-sponsor-dark-text">
+      <p className="mx-auto max-w-4xl px-10 text-center pt-10">
         Thank you to our wonderful sponsors who make everything possible.
-        Interested in joining our community?
-        Check out our{" "}
+        Interested in joining our community? Check out our{" "}
         <a
           href={sponsorship_package}
           target="_blank"
@@ -146,6 +172,6 @@ const Sponsors = () => {
       </p>
     </section>
   );
-}
+};
 
 export default Sponsors;
