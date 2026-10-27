@@ -16,7 +16,7 @@ const HeroText = ({ backgroundImage, title, description, bottomMaskColor }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/60 to-white/60" />
 
       {/* Content */}
-      <div className="max-w-7xl h-full mx-auto pr-[10%] relative flex justify-center items-center text-dark-text mt-4">
+      <div className="max-w-7xl h-full mx-auto pr-[10%] relative flex justify-center items-center mt-4">
         <div>
           <p className="hero-title">{title}</p>
           <p className="hero-subtitle">{description}</p>

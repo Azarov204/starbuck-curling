@@ -163,7 +163,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
-      <p className="mx-auto max-w-4xl px-10 text-center pt-10">
+      <p className="mx-auto max-w-5xl px-10 text-center pt-10">
         Thank you to our wonderful sponsors who make everything possible.
         Interested in joining our community? Check out our{" "}
         <a
