@@ -36,6 +36,7 @@ const Header = () => {
     <nav
       className={`fixed top-0 z-50 w-full
       bg-header-light/90
+      drop-shadow-md
       text-header-text-dark
       backdrop-blur-xs
       transition-all duration-300 
@@ -93,9 +94,9 @@ const Header = () => {
           <NavLink to="/" className="hover:text-header-text-hover-dark">
             Home
           </NavLink>
-          <NavLink to="/about" className="hover:text-header-text-hover-dark">
+          {/* <NavLink to="/about" className="hover:text-header-text-hover-dark">
             About
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/leagues" className="hover:text-header-text-hover-dark">
             Leagues
           </NavLink>
@@ -132,13 +133,13 @@ const Header = () => {
             >
               Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/about"
               className="block w-full text-center py-1 hover:bg-header-text-hover-dark/20 transition-colors duration-250 ease-in-out"
               onClick={() => setIsOpen(false)}
             >
               About
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/leagues"
               onClick={() => setIsOpen(false)}
