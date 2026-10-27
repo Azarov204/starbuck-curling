@@ -1,6 +1,7 @@
 import plat_1 from "../../assets/sponsors/platinum/perfectly_raw.jpg";
 import plat_2 from "../../assets/sponsors/platinum/one_insurance.png";
 import plat_3 from "../../assets/sponsors/platinum/access_logo.jpg";
+import plat_4 from "../../assets/sponsors/platinum/prairie_flour_mills.png";
 
 import gold_1 from "../../assets/sponsors/gold/east_meridian_electric.png";
 import gold_2 from "../../assets/sponsors/gold/terraco.jpg";
@@ -12,7 +13,7 @@ import silver_3 from "../../assets/sponsors/silver/extreme_coatings.png";
 import silver_4 from "../../assets/sponsors/silver/enns_brothers.jpg";
 import silver_5 from "../../assets/sponsors/silver/rosenort_motors.jpg";
 
-import sponsorship_package from "./../../assets/sponsors/sponsorship_package.jpg";
+import sponsorship_package from "./../../assets/sponsors/sponsorship_package_26-27.pdf";
 
 import SponsorCardPlatinum from "./SponsorCardPlatinum.jsx";
 import SponsorCardGold from "./SponsorCardGold.jsx";
@@ -25,6 +26,11 @@ const platSponsors = [
     src: plat_3,
     alt: "Access Credit Union",
     link: "https://accesscu.ca/en/personal",
+  },
+  {
+    src: plat_4,
+    alt: "Prairie Flour Mills",
+    link: "https://prairieflour.com/",
   },
 ];
 
