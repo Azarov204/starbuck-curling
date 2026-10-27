@@ -64,7 +64,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <Poster image={poster} />
+      {/* <Poster image={poster} /> */}
       {/* <SlideShow images={images} /> */}
       <Sponsors />
       <Contact />
