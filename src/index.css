@@ -12,10 +12,17 @@
   --color-header-text-hover-dark: #838383;
 
   --global-text-dark: #121212;
+  --global-text-dark-hero: #121212;
+
+  /* Font */
+  --font-sans: "Inter", sans-serif;
 }
 
-body {
-  color: var(--global-text-dark);
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--global-text-dark);
+  }
 }
 
 h1 {
@@ -68,12 +75,15 @@ li {
 }
 
 .hero-title {
-  @apply font-bold;
+  @apply font-extrabold drop-shadow-xl;
   font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--global-text-dark-hero);
 }
 
 .hero-subtitle {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  @apply font-light drop-shadow-xl;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--global-text-dark-hero);
 }
 
 .hero-background {
