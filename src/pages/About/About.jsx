@@ -11,7 +11,7 @@ const About = () => {
         description="Starbuck Curling Club"
         bottomMaskColor={"var(--color-website-bg-1)"}
       />
-      <div className="mx-auto max-w-7xl px-16 pb-12">
+      <div className="mx-auto max-w-5xl px-16 pb-12">
         <p className="text-center pb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec
           mauris quis erat hendrerit eleifend. Etiam et aliquam erat. Donec

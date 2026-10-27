@@ -46,17 +46,17 @@ const Home = () => {
         bottomMaskColor={"var(--color-website-bg-1)"}
       ></HeroLogo>
       <div className="grow">
-        <div className="mx-auto max-w-7xl px-16 pb-12">
-          <h1 className="flex justify-center text-center font-bold pb-6">
+        <div className="px-16 pb-24">
+          <h1 className="mx-auto max-w-7xl flex justify-center text-center font-bold pb-6">
             Welcome to the Starbuck Curling Club!
           </h1>
-          <p className="text-center pb-6">
+          <p className="mx-auto max-w-5xl text-center pb-6">
             We’re a small-town club in Starbuck, Manitoba where community comes
             first. Home of Ernie’s bar, our strong sense of camaraderie makes
             for fun, competitive, and welcoming men’s and ladies’ leagues
             throughout the season.
           </p>
-          <p className="text-center">
+          <p className="mx-auto max-w-5xl text-center ">
             We also offer league play, open curling nights, bonspiels and glow
             curling. If you’d like to book the ice or inquire about our
             different curling leagues, please contact us, we’d love to have you
