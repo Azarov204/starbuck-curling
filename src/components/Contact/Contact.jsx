@@ -10,11 +10,8 @@ const Contact = () => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-    formData.append(
-      "subject",
-      "New Submission from Starbuck Curling Club Website",
-    );
-    formData.append("access_key", "3387ae68-0db6-4a8f-99a6-2ae920b23d0a");
+    formData.append("subject", "New Starbuck Curling Club Website Submission");
+    formData.append("access_key", "827456ad-13d2-4dc3-9a5b-688b53c0be56");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -50,7 +47,7 @@ const Contact = () => {
         {/* FORM */}
         <form className="space-y-2" onSubmit={onSubmit}>
           {/* Name */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block mb-2">*Name</label>
               <input
@@ -59,6 +56,31 @@ const Contact = () => {
                 className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"
                 required
               />
+            </div>
+
+            {/* Subject list */}
+            <div>
+              <label className="block mb-2">*Subject</label>
+              <select
+                name="Subject"
+                className="w-full h-10 rounded-sm px-3 focus:outline-none border bg-white"
+                required
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a subject...
+                </option>
+                <option value="Mens curling inquiry">Men's Curling</option>
+                <option value="Womens curling inquiry">Women's Curling</option>
+                <option value="Special curling events">
+                  Glow Curling & Special Nights
+                </option>
+                <option value="Bonspiels and Tournaments">
+                  Bonspiels & Tournaments
+                </option>
+                <option value="Ice Rental">Ice Rental</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
 
             {/* Email */}
