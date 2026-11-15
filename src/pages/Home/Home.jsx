@@ -13,6 +13,7 @@ import bar from "../../assets/photos/IMG_5333.jpg";
 import pitcher from "../../assets/photos/IMG_5352.jpg";
 import glow from "../../assets/photos/IMG_7960.jpg";
 import beerPourer from "../../assets/photos/IMG_8064.jpg";
+import TopPageBlurb from "../../components/TopPageBlurb.jsx";
 
 const images = [
   {
@@ -46,22 +47,18 @@ const Home = () => {
         bottomMaskColor={"var(--color-website-bg-1)"}
       ></HeroLogo>
       <div className="grow">
-        <div className="px-16 pb-24">
-          <h1 className="mx-auto max-w-7xl flex justify-center text-center font-bold pb-6">
-            Welcome to the Starbuck Curling Club!
-          </h1>
-          <p className="mx-auto max-w-5xl text-center pb-6">
-            We’re a small-town club in Starbuck, Manitoba where community comes
+        <div className="mx-auto max-w-6xl px-10 pb-10">
+          <TopPageBlurb
+            title="Welcome to the Starbuck Curling Club!"
+            desc="We’re a small-town club in Starbuck, Manitoba where community comes
             first. Home of Ernie’s bar, our strong sense of camaraderie makes
             for fun, competitive, and welcoming men’s and ladies’ leagues
-            throughout the season.
-          </p>
-          <p className="mx-auto max-w-5xl text-center ">
-            We also offer league play, open curling nights, bonspiels and glow
+            throughout the season."
+            desc2="We also offer league play, open curling nights, bonspiels and glow
             curling. If you’d like to book the ice or inquire about our
             different curling leagues, please contact us, we’d love to have you
-            join us.
-          </p>
+            join us."
+          />
         </div>
       </div>
       {/* <Poster image={poster} /> */}
