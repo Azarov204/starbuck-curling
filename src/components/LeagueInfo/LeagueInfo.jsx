@@ -4,7 +4,7 @@ const LeagueInfo = ({
   startDay,
   gameDay,
   scheduleImg,
-  registerInfo,
+  registerInfo = "",
 }) => {
   return (
     <div className="px-16 py-4">
