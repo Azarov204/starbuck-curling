@@ -321,17 +321,17 @@ html {
   border-left: 0;
 }
 .sponsor-tier > span {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #8b989e;
 }
 .sponsor-tier h3 {
   font-size: 2rem;
   color: var(--blue);
-  margin: 68px 0 22px;
+  margin: 30px 0 22px;
 }
 .sponsor-tier p {
-  font-size: 0.78rem;
+  font-size: 1rem;
   margin: 7px 0;
   color: #65747d;
 }
