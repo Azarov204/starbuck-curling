@@ -96,7 +96,7 @@ export function ContactSection({ showMap = false }) {
             {/* Phone */}
             <label>
               Phone <span>(optional)</span>
-              <input name="phone" type="tel" placeholder="(204) 000-0000" />
+              <input name="phone" type="tel" placeholder="(204) 123-4567" />
             </label>
           </div>
 

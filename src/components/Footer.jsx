@@ -6,7 +6,6 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <ClubMark compact />
-        <p>Good ice. Great people. Since 1936</p>
         <div className="footer-links">
           <Link to="/leagues">Leagues</Link>
           <Link to="/facility-rentals">Rent the club</Link>
@@ -15,6 +14,7 @@ export function Footer() {
         <p className="copyright">
           © {new Date().getFullYear()} Starbuck Curling Club
         </p>
+        <p className="shoutout">Created by Adam Azarov</p>
       </div>
     </footer>
   );

@@ -17,7 +17,7 @@ export function PageHero({ title, eyebrow }) {
         ) : (
           <>
             <ClubMark />
-            <p>Community on ice, in the heart of Starbuck</p>
+            {/* <p>Community on ice, in the heart of Starbuck</p> */}
           </>
         )}
       </div>
