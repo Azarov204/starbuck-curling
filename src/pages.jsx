@@ -163,8 +163,8 @@ export function LeaguesPage() {
 }
 
 const rentalFeatures = [
-  "Licensed lounge for up to 90 guests",
-  "Four sheets of curling ice",
+  "Licensed lounge for up to x guests",
+  "Three sheets of curling ice",
   "Kitchen and serving area",
   "Tables, chairs, and accessible washrooms",
 ];
@@ -185,9 +185,9 @@ export function FacilityPage() {
               meetings, and community events in the heart of Starbuck.
             </p>
             <p>
-              Our club combines four sheets of well-maintained curling ice with
-              a bright upstairs lounge, a full kitchen, and flexible room
-              layouts. We’ll help you build a rental that fits your group.
+              Our club combines three sheets of well-maintained curling ice with
+              a bright upstairs lounge, Ernie's bar, and flexible room layouts.
+              We’ll help you build a rental that fits your group.
             </p>
           </div>
         </div>
@@ -224,7 +224,7 @@ export function FacilityPage() {
           />
           <div className="option-grid">
             <article>
-              <span>From $125</span>
+              <span>From $45</span>
               <h3>Lounge rental</h3>
               <p>
                 Birthday parties, showers, meetings, and community gatherings

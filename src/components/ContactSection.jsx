@@ -3,11 +3,29 @@ import { ArrowRight, Clock3, Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactSection({ showMap = false }) {
   const [sent, setSent] = useState(false);
+  const [submitMsg, setSubmitMsg] = useState("");
 
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault();
-    setSent(true);
-    event.currentTarget.reset();
+    const formData = new FormData(event.target);
+    formData.append("subject", "New Starbuck Curling Club Website Submission");
+    formData.append("access_key", "827456ad-13d2-4dc3-9a5b-688b53c0be56");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setSent(true);
+      setSubmitMsg("Thanks! Your message has been sent.");
+      event.currentTarget.reset();
+    } else {
+      console.log("Error", data);
+      setSubmitMsg("Error! Something went wrong.");
+    }
   };
 
   return (
@@ -28,18 +46,18 @@ export function ContactSection({ showMap = false }) {
             >
               <MapPin size={20} />
               <span>
-                10 Arena Road
+                60 Arena Blvd
                 <br />
                 Starbuck, MB R0G 2P0
               </span>
             </a>
-            <a href="tel:+12047354344">
+            <a href="tel:+12047352463">
               <Phone size={20} />
-              <span>(204) 735-4344</span>
+              <span>(204) 735-2463</span>
             </a>
-            <a href="mailto:hello@starbuckcurlingclub.ca">
+            <a href="mailto:starbuckmenscurling@gmail.com">
               <Mail size={20} />
-              <span>hello@starbuckcurlingclub.ca</span>
+              <span>starbuckmenscurling@gmail.com</span>
             </a>
             <div>
               <Clock3 size={20} />
@@ -47,12 +65,16 @@ export function ContactSection({ showMap = false }) {
             </div>
           </div>
         </div>
+
         <form className="contact-form" onSubmit={submit}>
           <div className="field-row">
+            {/* Name */}
             <label>
               Full name
               <input name="name" required placeholder="Your name" />
             </label>
+
+            {/* Email */}
             <label>
               Email address
               <input
@@ -63,16 +85,22 @@ export function ContactSection({ showMap = false }) {
               />
             </label>
           </div>
+
           <div className="field-row">
+            {/* Subject */}
             <label>
               Subject
               <input name="subject" required placeholder="How can we help?" />
             </label>
+
+            {/* Phone */}
             <label>
               Phone <span>(optional)</span>
               <input name="phone" type="tel" placeholder="(204) 000-0000" />
             </label>
           </div>
+
+          {/* Message */}
           <label>
             Message
             <textarea
@@ -87,7 +115,7 @@ export function ContactSection({ showMap = false }) {
           </button>
           {sent && (
             <p className="form-success" role="status">
-              Thanks! Your message has been received.
+              {submitMsg}
             </p>
           )}
         </form>
