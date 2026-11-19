@@ -42,13 +42,13 @@ html {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(248, 246, 239, 0.95);
+  background: var(--cream);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(23, 48, 68, 0.12);
 }
 .nav-shell {
   max-width: 1240px;
-  height: 78px;
+  height: 100px;
   margin: auto;
   padding: 0 28px;
   display: flex;
@@ -61,8 +61,8 @@ html {
 }
 .club-mark {
   display: flex;
-  align-items: center;
-  gap: 18px;
+  align-items: flex-end;
+  gap: 20px;
   color: var(--cream);
 }
 .club-mark div {
@@ -74,18 +74,18 @@ html {
   text-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
 }
 .club-mark span {
-  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-size: clamp(2.7rem, 7vw, 6rem);
   font-family: var(--serif);
   letter-spacing: -0.03em;
   text-transform: none;
 }
 .club-mark strong {
-  margin-top: 9px;
-  font-size: clamp(0.75rem, 1.5vw, 1.15rem);
+  margin-top: 16px;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
   letter-spacing: 0.2em;
 }
 .club-mark-logo {
-  width: 128px;
+  width: clamp(10rem, 20vw, 20rem);
 }
 .club-mark--compact {
   gap: 10px;
@@ -95,12 +95,12 @@ html {
   text-shadow: none;
 }
 .club-mark--compact span {
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: -0.01em;
 }
 .club-mark--compact strong {
   font-family: var(--sans);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 0.1em;
   margin-top: 2px;
 }
@@ -111,8 +111,8 @@ html {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 34px;
-  font-size: 0.82rem;
+  gap: 24px;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 .main-nav > a {
@@ -127,7 +127,7 @@ html {
   right: 100%;
   bottom: -9px;
   height: 2px;
-  background: var(--red);
+  background: var(--ink);
   transition: right 0.2s;
 }
 .main-nav > a.active {
@@ -149,13 +149,33 @@ html {
   display: none;
   background: none;
   border: 0;
-  color: var(--blue);
+  color: var(--ink);
+}
+.menu-button-design {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3px;
+  width: 48px;
+  height: 48px;
+}
+.menu-button-design span {
+  display: block;
+  height: 3px;
+  background-color: var(--blue);
+  border-radius: 3px;
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    margin-left 0.25s ease;
 }
 
 .hero {
-  min-height: 590px;
-  height: 73vh;
-  max-height: 760px;
+  min-height: 500px;
+  height: 50vw;
+  max-height: 600px;
   position: relative;
   display: grid;
   place-items: center;
@@ -185,14 +205,15 @@ html {
   align-items: flex-start;
 }
 .hero-content > p {
-  margin: 24px 0 0 146px;
+  margin: 10px 0 0 248px;
   font-size: 0.9rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 .hero--page {
-  min-height: 410px;
-  height: 52vh;
+  min-height: 500px;
+  height: 50vw;
+  max-height: 600px;
   background-position: center 54%;
   place-items: end center;
 }
@@ -231,7 +252,7 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .eyebrow.light {
   color: var(--cream);
@@ -257,7 +278,7 @@ html {
   color: #62727d;
   line-height: 1.85;
   margin: 0 0 20px;
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 .prose .lead {
   color: var(--ink);
@@ -357,7 +378,7 @@ html {
   gap: 14px;
   color: #e9eff1;
   text-decoration: none;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   line-height: 1.65;
 }
 .contact-details svg {
@@ -377,7 +398,7 @@ html {
 }
 .contact-form label {
   display: block;
-  font-size: 0.69rem;
+  font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 22px;
 }
@@ -664,7 +685,7 @@ html {
   margin: auto;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 20px;
 }
 .site-footer .club-mark--compact {
   color: white;
@@ -680,15 +701,18 @@ html {
 .footer-links {
   margin-left: auto;
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 .footer-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
 }
 .footer-inner .copyright {
-  padding-left: 28px;
+  padding-left: 16px;
+  border-left: 1px solid #365166;
+}
+.footer-inner .shoutout {
+  padding-left: 16px;
   border-left: 1px solid #365166;
 }
 .not-found {
@@ -708,7 +732,7 @@ html {
 
 @media (max-width: 850px) {
   .nav-shell {
-    height: 68px;
+    height: 80px;
     padding: 0 20px;
   }
   .menu-button {
@@ -717,10 +741,11 @@ html {
   .main-nav {
     display: none;
     position: absolute;
-    top: 68px;
+    top: 80px;
     left: 0;
     right: 0;
     padding: 24px;
+    padding-top: 12px;
     background: var(--paper);
     flex-direction: column;
     align-items: stretch;
@@ -738,25 +763,8 @@ html {
     margin-top: 10px;
     justify-content: center;
   }
-  .hero {
-    min-height: 520px;
-    height: 70vh;
-  }
-  .hero--page {
-    min-height: 360px;
-    height: 48vh;
-  }
   .hero-content > p {
     margin-left: 0;
-  }
-  .club-mark:not(.club-mark--compact) {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .club-mark:not(.club-mark--compact) svg {
-    width: 100px;
-    height: 100px;
   }
   .split-intro,
   .contact-grid,
@@ -800,7 +808,7 @@ html {
   }
 }
 
-@media (max-width: 520px) {
+/* @media (max-width: 520px) {
   .club-mark--compact div {
     display: none;
   }
@@ -832,7 +840,7 @@ html {
     flex-direction: column;
     gap: 10px;
   }
-}
+} */
 
 @media print {
   body > * {
