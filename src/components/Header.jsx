@@ -1,14 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
-import { ArrowRight, Menu, X } from "lucide-react";
 
 import { ClubMark } from "../components/ClubMark.jsx";
 
+const navigationLinks = [
+  { to: "/", label: "Home" },
+  { to: "/leagues", label: "Leagues" },
+  { to: "/facility-rentals", label: "Facility & Rentals" },
+];
+
 export function Header() {
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => setOpen(false), [location.pathname]);
+
+  useEffect(() => {
+    const wideScreen = window.matchMedia("(min-width: 851px)");
+    const closeOnWideScreen = () => {
+      if (wideScreen.matches) setOpen(false);
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    wideScreen.addEventListener("change", closeOnWideScreen);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      wideScreen.removeEventListener("change", closeOnWideScreen);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [open]);
 
   const contactHref = `${location.pathname}#contact`;
   const scrollToContact = (event) => {
@@ -31,11 +56,27 @@ export function Header() {
         >
           <ClubMark compact />
         </Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {navigationLinks.map((link) => (
+            <NavLink key={link.to} to={link.to} end={link.to === "/"}>
+              {link.label}
+            </NavLink>
+          ))}
+          <a
+            className="desktop-nav__contact"
+            href={contactHref}
+            onClick={scrollToContact}
+          >
+            Contact us
+          </a>
+        </nav>
         <button
-          className="menu-button"
+          ref={menuButtonRef}
+          className="mobile-nav-toggle"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle navigation"
+          aria-label={open ? "Close navigation" : "Open navigation"}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? (
             // Curling rock aiming left (open menu)
@@ -62,16 +103,23 @@ export function Header() {
           )}
         </button>
         <nav
-          className={open ? "main-nav main-nav--open" : "main-nav"}
-          aria-label="Main navigation"
+          id="mobile-navigation"
+          className="mobile-nav"
+          aria-label="Mobile navigation"
+          hidden={!open}
         >
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/leagues">Leagues</NavLink>
-          <NavLink to="/facility-rentals">Facility &amp; Rentals</NavLink>
+          {navigationLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === "/"}
+              onClick={() => setOpen(false)}
+            >
+              {link.label}
+            </NavLink>
+          ))}
           <a
-            className="nav-contact"
+            className="mobile-nav__contact"
             href={contactHref}
             onClick={scrollToContact}
           >
