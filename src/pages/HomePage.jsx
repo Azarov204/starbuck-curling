@@ -1,7 +1,6 @@
 import { ContactSection } from "../components/ContactSection.jsx";
 import { PageHero } from "../components/PageHero.jsx";
 import { SectionTitle } from "../components/SectionTitle.jsx";
-import { TextLink } from "../components/TextLink.jsx";
 import { Sponsors } from "../components/Sponsors.jsx";
 
 export function HomePage() {
@@ -16,7 +15,7 @@ export function HomePage() {
           />
           <div className="prose">
             <p className="lead">
-              More Than Just Curling — A Community on and Off the Ice
+              More Than Just Curling — A Community on and off the Ice
             </p>
             <p>
               Located in Starbuck, Manitoba, our curling club is built on

@@ -49,7 +49,7 @@ export function Header() {
               <span className="w-10 ml-1.25"></span>
             </div>
           ) : (
-            // Curling rock aiming left (closed menu)
+            // Curling rock aiming right (closed menu)
             <div className="menu-button-design">
               <span className="w-5.5 ml-5"></span>
               <span className="w-2.75 ml-8.5"></span>
