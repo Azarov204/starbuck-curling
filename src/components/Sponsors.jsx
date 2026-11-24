@@ -20,7 +20,6 @@ const tiers = [
   {
     name: "Platinum",
     cardClass: "sponsor-card-platinum",
-    blurb: "Our headline partners",
     label:
       "text-slate-700 bg-gradient-to-r from-slate-200 to-slate-100 ring-slate-300",
     sponsors: [
@@ -45,7 +44,6 @@ const tiers = [
   {
     name: "Gold",
     cardClass: "sponsor-card-gold",
-    blurb: "Major supporters",
     label: "text-amber-800 bg-amber-100 ring-amber-300",
     sponsors: [
       {
@@ -60,7 +58,6 @@ const tiers = [
   {
     name: "Silver",
     cardClass: "sponsor-card-silver",
-    blurb: "Community supporters",
     label: "text-zinc-600 bg-zinc-100 ring-zinc-300",
     sponsors: [
       {
@@ -116,18 +113,17 @@ export function Sponsors() {
           }
         />
         <div className="mx-auto max-w-7xl">
-          <div className="mt-16 space-y-14">
+          <div className="mt-10 space-y-10">
             {tiers.map((tier) => (
               <div key={tier.name}>
-                <div className="mb-6 flex flex-col items-center gap-2">
+                <div className="mb-2 flex flex-col items-center gap-2">
                   <span
-                    className={`rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest ring-1 ${tier.label}`}
+                    className={`rounded-full px-4 py-1 text-md font-semibold uppercase tracking-widest ring-1 ${tier.label}`}
                   >
                     {tier.name}
                   </span>
-                  <span className="text-sm text-neutral-500">{tier.blurb}</span>
                 </div>
-                <div className={`mx-auto flex flex-wrap justify-center gap-5`}>
+                <div className="sponsor-collection">
                   {tier.sponsors.map((s) => (
                     <a
                       key={s.name}

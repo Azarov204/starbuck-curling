@@ -3,9 +3,11 @@
 
 :root {
   --cream: #fff2be;
+  --cream-hover: #f6eaba;
   --paper: #f8f6ef;
   --ink: #173044;
   --blue: #123b5d;
+  --grey-blue: #123b5db0;
   --red: #c9343b;
   --line: #d9ddd9;
   --serif: "DM Serif Display", Georgia, serif;
@@ -108,42 +110,102 @@ html {
   width: 64px;
 }
 
-.main-nav {
+/* WIDE-SCREEN NAVIGATION: customize independently of .mobile-nav below. */
+.desktop-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-size: 0.95rem;
+  gap: 34px;
+  font-size: 1rem;
   font-weight: 700;
 }
-.main-nav > a {
-  color: #4e606d;
+.desktop-nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--grey-blue);
   text-decoration: none;
   position: relative;
 }
-.main-nav > a:not(.nav-contact)::after {
+.desktop-nav > a:not(.desktop-nav__contact)::after {
   content: "";
   position: absolute;
   left: 0;
   right: 100%;
-  bottom: -9px;
+  bottom: 0;
   height: 2px;
-  background: var(--ink);
+  background: var(--red);
   transition: right 0.2s;
 }
-.main-nav > a.active {
+.desktop-nav > a.active {
   color: var(--blue);
 }
-.main-nav > a.active::after,
-.main-nav > a:hover::after {
+.desktop-nav > a.active::after,
+.desktop-nav > a:hover::after {
   right: 0;
 }
-.main-nav .nav-contact {
+.desktop-nav .desktop-nav__contact {
   background: var(--blue);
   color: white;
   padding: 12px 17px;
   display: flex;
   gap: 8px;
   align-items: center;
+}
+.desktop-nav .desktop-nav__contact:hover {
+  background: var(--ink);
+}
+.desktop-nav > a:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
+}
+
+/* NARROW-SCREEN NAVIGATION: no desktop link styles are inherited. */
+.mobile-nav,
+.mobile-nav-toggle {
+  display: none;
+}
+.mobile-nav-toggle {
+  background: none;
+  border: 0;
+  color: var(--blue);
+  width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 14px 12px;
+  color: var(--grey-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.mobile-nav > a.active {
+  color: var(--blue);
+  background: var(--cream-hover);
+  border-left-color: var(--red);
+}
+.mobile-nav > a:hover {
+  background: var(--cream-hover);
+}
+.mobile-nav .mobile-nav__contact {
+  margin-top: 10px;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue);
+  color: white;
+}
+.mobile-nav .mobile-nav__contact:hover {
+  background: var(--ink);
+}
+.mobile-nav-toggle:focus-visible,
+.mobile-nav > a:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
 }
 .menu-button {
   display: none;
@@ -306,6 +368,13 @@ html {
 }
 .sponsors .section-title {
   max-width: 780px;
+}
+.sponsor-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 10px;
 }
 .sponsor-card {
   display: flex;
@@ -747,38 +816,29 @@ html {
   margin: 12px 0 30px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .nav-shell {
-    height: 80px;
+    height: 68px;
     padding: 0 20px;
   }
-  .menu-button {
-    display: block;
-  }
-  .main-nav {
+  .desktop-nav {
     display: none;
+  }
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+  .mobile-nav:not([hidden]) {
+    display: flex;
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     right: 0;
     padding: 24px;
-    padding-top: 12px;
-    background: var(--paper);
+    background-image: linear-gradient(to bottom, var(--cream), #ffffff);
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+    max-height: calc(100dvh - 68px);
+    overflow-y: auto;
     border-bottom: 1px solid var(--line);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  }
-  .main-nav--open {
-    display: flex;
-  }
-  .main-nav > a {
-    padding: 14px 4px;
-  }
-  .main-nav .nav-contact {
-    margin-top: 10px;
-    justify-content: center;
   }
   .hero-content > p {
     margin-left: 0;
@@ -797,12 +857,18 @@ html {
   .option-grid {
     grid-template-columns: 1fr;
   }
-  .sponsor-card-platinum {
-    width: 100%;
+  .sponsor-collection {
+    gap: 0.5rem;
   }
-  .sponsor-card-gold,
+  .sponsor-card-platinum {
+    height: 9rem;
+  }
+  .sponsor-card-gold {
+    height: 7rem;
+  }
   .sponsor-card-silver {
-    width: calc(50% - 0.625rem);
+    width: calc(30%);
+    height: 5.5rem;
   }
   .league-card {
     min-height: 280px;
@@ -827,40 +893,6 @@ html {
     margin-left: auto;
   }
 }
-
-/* @media (max-width: 520px) {
-  .club-mark--compact div {
-    display: none;
-  }
-  .hero-content {
-    width: calc(100% - 40px);
-  }
-  .hero h1 {
-    font-size: 3.8rem;
-  }
-  .field-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .contact-form {
-    padding: 25px 20px;
-  }
-  .poster {
-    padding: 42px 25px 30px;
-    border-width: 6px;
-  }
-  .poster-tiers {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-  .poster-tiers span {
-    margin-bottom: 9px;
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-} */
 
 @media print {
   body > * {
