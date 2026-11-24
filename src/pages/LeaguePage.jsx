@@ -13,7 +13,7 @@ const leagueCards = [
   },
   {
     title: "Women’s League",
-    day: "TBD evenings",
+    day: "TBD",
     copy: "Great curling and an even better social night. New teams and individual players are always welcome.",
     accent: "blue",
   },
@@ -66,12 +66,12 @@ export function LeaguePage() {
                 key={league.title}
               >
                 <div className="league-number">
-                  <Users size={22} />
+                  <Users size={24} />
                 </div>
                 <span className="eyebrow">{league.day}</span>
                 <h3>{league.title}</h3>
                 <p>{league.copy}</p>
-                <ScheduleButton league={league.title} />
+                {/* <ScheduleButton league={league.title} /> */}
               </article>
             ))}
           </div>

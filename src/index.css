@@ -558,7 +558,7 @@ html {
   margin-top: 50px;
 }
 .league-card {
-  min-height: 460px;
+  min-height: 360px;
   background: white;
   padding: 30px;
   display: flex;
@@ -572,7 +572,7 @@ html {
   border-color: #e3bd54;
 }
 .league-number {
-  margin-bottom: 55px;
+  margin-bottom: 35px;
   color: var(--red);
 }
 .league-card h3 {
@@ -805,7 +805,7 @@ html {
     width: calc(50% - 0.625rem);
   }
   .league-card {
-    min-height: 390px;
+    min-height: 280px;
   }
   .contact-section {
     padding-top: 80px;
