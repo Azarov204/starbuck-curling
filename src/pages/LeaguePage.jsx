@@ -32,7 +32,7 @@ export function LeaguePage() {
       <section className="section">
         <div className="section-shell split-intro">
           <SectionTitle
-            eyebrow="2025–26 season"
+            eyebrow="2026–27 season"
             title="Your week just got better."
           />
           <div className="prose">
